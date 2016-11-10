@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pelindo Dashboard</title>
+	<link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
+	<link rel="stylesheet" type="text/css" href="plugins/fontawesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="plugins/jqvmap/jqvmap.min.css">
+	<link rel="stylesheet" type="text/css" href="plugins/daterangepicker/daterangepicker.min.css">
+	<link rel="stylesheet" type="text/css" href="plugins/datatables/css/jquery.dataTables.min.css">
+	<link rel="stylesheet" type="text/css" href="plugins/datatables/css/dataTables.semanticui.min.css">
+	<link rel="stylesheet" type="text/css" href="plugins/slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="plugins/fullcalendar/fullcalendar.min.css">
+	<link rel="stylesheet" type="text/css" href="plugins/fullcalendar/fullcalendar.print.css" media='print'>
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+
+	<style type="text/css">
+		footer div.ui.dark-gray, footer div.ui.inverted.segment{
+			background-image: url('images/black-orchid.png');
+			background-repeat: repeat;
+		}
+		body{
+			background-image: url('images/fabric-1-light.png');
+		}
+	</style>
+</head>
+<body>
+	<div class="line-top"></div>
+	<header class="ui labeled icon stackable tiny menu no-radius">
+		<div class="ui container">
+			<a class="item" href="dashboard.html"><i class="dashboard icon"></i>Dashboard</a>
+			<a class="item" href="widgets.html"><i class="grid layout icon"></i>Widgets</a>
+			<div class="ui dropdown item">
+				<i class="edit icon"></i>
+				Forms
+				<div class="menu">
+					<a class="item" href="form_umum.html">Form Umum</a>
+					<a class="item" href="form_canggih.html">Form Canggih</a>
+					<a class="item" href="form_editor.html">Form Editor</a>
+				</div>
+			</div>
+			<div class="ui dropdown item">
+				<i class="table icon"></i>
+				Tables
+				<div class="menu">
+					<a class="item" href="semantic_table.html">Semantic Table</a>
+					<a class="item" href="data_table.html">Data Tables</a>
+				</div>
+			</div>
+			<a class="item active" href="#"><i class="area chart icon"></i>Charts</a>
+			<div class="ui dropdown item">
+				<i class="laptop icon"></i>
+				UI Elements
+				<div class="menu">
+					<a class="item" href="ui_umum.html">Umum</a>
+					<a class="item" href="ui_icons.html">Icon</a>
+					<a class="item" href="ui_typografi.html">Typografi</a>
+					<a class="item" href="ui_kalender.html">Kalender</a>
+				</div>
+			</div>
+			<div class="ui dropdown item">
+				<i class="long arrow down icon"></i>
+				Dropdown
+				<div class="menu">
+					<a class="item">Level1</a>
+					<a class="item">Level1</a>
+					<a class="item">
+						<i class="dropdown icon"></i>
+						Level1
+						<div class="menu">
+							<div class="item">Level2</div>
+							<div class="item">Level2</div>
+							<div class="item">
+								<i class="dropdown icon"></i>
+								Level2
+								<div class="menu">
+									<div class="item">Level3</div>
+									<div class="item">Level3</div>
+									<div class="item">Level3</div>
+								</div>
+							</div>
+							<div class="item">Level2</div>
+							<div class="item">Level2</div>
+							<div class="item">Level2</div>
+						</div>
+					</a>
+					<a class="item">Level1</a>
+				</div>
+			</div>
+
+			<div class="right menu">
+				<div class="ui fluid dropdown item">
+					<i class="bell icon"></i>
+					Pemberitahuan
+					<div class="menu">
+						<div class="header">Update Progress</div>
+						<div class="ui divider"></div>
+						<div class="item">
+							<div class="ui tiny indicating progress" data-value="40" data-total="200">
+								<div class="bar"></div>
+								<div class="label">Progress Kapal Laut</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="ui tiny indicating progress" data-value="40" data-total="100">
+								<div class="bar"></div>
+								<div class="label">Progress Kapal Perang</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="ui tiny indicating progress" data-value="2220" data-total="3000">
+								<div class="bar"></div>
+								<div class="label">Progress Kapal Ikan</div>
+							</div>
+						</div>
+						<div class="ui divider"></div>
+						<div class="item center aligned">
+							<a href="#">Lihat Semua Pemberitahuan</a>
+						</div>
+					</div>
+				</div>
+				<div class="ui dropdown item">
+					<i class="user icon"></i>
+					Akun
+					<div class="menu">
+						<div class="item"><i class="user icon"></i> Profile</div>
+						<a class="item"><i class="settings icon"></i> Pengaturan</a>
+						<div class="divider"></div>
+						<a class="item"><i class="sign out icon"></i> Keluar</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="ui container">
+		<h3 class="ui header title-page">Form Umum</h3>
+	</div>
+
+
+	<div class="content">
+		<div class="ui container">
+			<div class="ui stackable grid">
+				<div class="sixteen wide column">
+					<div class="ui stacked segments">
+						<div class="ui red inverted segment">
+							Line Chart
+						</div>
+						<div class="ui segment">
+							<canvas id="chart1" style="width: 100%;height:30px;"></canvas>
+						</div>
+					</div>
+				</div>
+
+				<div class="sixteen wide column">
+					<div class="ui stacked segments">
+						<div class="ui violet inverted segment">
+							Pie Donut Chart
+						</div>
+						<div class="ui segment">
+							<div class="ui stackable grid">
+								<div class="two column row">
+									<div class="column">
+										<canvas id="chart2" style="width: 100%;height:30px;"></canvas>
+									</div>
+									<div class="column">
+										<canvas id="chart3" style="width: 100%;height:30px;"></canvas>
+									</div>
+								</div>
+							</div>	
+						</div>
+					</div>
+				</div>
+
+				<div class="three column row">
+					<div class="column">
+						<div class="ui stacked segments">
+							<div class="ui green inverted segment">
+								Bar Chart
+							</div>
+							<div class="ui segment">
+								<canvas id="chart4" style="width: 100%;height:30px;"></canvas>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="ui stacked segments">
+							<div class="ui yellow inverted segment">
+								Horizontal Bar Chart
+							</div>
+							<div class="ui segment">
+								<canvas id="chart5" style="width: 100%;height:30px;"></canvas>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="ui stacked segments">
+							<div class="ui blue inverted segment">
+								Radar Chart
+							</div>
+							<div class="ui segment">
+								<canvas id="chart6" style="width: 100%;height:30px;"></canvas>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						
+					</div>
+				</div>
+			</div>
+		</div><!-- container -->
+	</div><!-- content -->
+
+		<footer class="ui segments" style="border-radius:0px 0px 0px 0px!important;margin-bottom: -1px;margin-left: -1px;">
+		<div class="ui dark-gray very padded segment no-radius">
+			<div class="ui four column doubling stackable grid container">
+			  <div class="column">
+			  	<h5 class="ui white header">About Kurniawan Template</h5>
+			    <div class="ui link list">
+					<a class="item">agungkurniawan.me</a>
+					<a class="item">Web Developer</a>
+					<a class="item">Responsive HTML Portofolio</a>
+					<a class="item">Free Script Resources</a>
+				</div>
+			  </div>
+			  <div class="column">
+			    <h5 class="ui white header">Support</h5>
+			    <div class="ui link list">
+					<a class="item">Frequently Asked Questions</a>
+					<a class="item">Ask Question</a>
+					<a class="item">Tutorial</a>
+					<a class="item">Feedback</a>
+				</div>
+			  </div>
+			  <div class="column">
+			    <h5 class="ui white header">Plugins</h5>
+			    <div class="ui link list">
+					<a class="item">Jquery</a>
+					<a class="item">Semantic-ui</a>
+					<a class="item">jqvmap</a>
+				</div>
+			  </div>
+			  <div class="column">
+			    <h5 class="ui white header">Legal</h5>
+			    <div class="ui link list">
+					<a class="item">Read License</a>
+					<a class="item">Web Developer</a>
+					<a class="item">Responsive HTML Portofolio</a>
+				</div>
+			  </div>
+			</div>
+		</div>
+		<div class="ui inverted segment no-radius">
+			<div class="ui container">
+				&copy; 2016 Agung Kurniawan@<a href="http://thaybah.id" target="_blank">Thaybah Surabaya</a>
+			</div>
+		</div>
+	</footer>
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="semantic/semantic.min.js"></script>
+	<script type="text/javascript" src="plugins/chartjs/Chart.bundle.min.js"></script>
+	<script type="text/javascript" src="plugins/jqvmap/jquery.vmap.min.js"></script>
+	<script type="text/javascript" src="plugins/jqvmap/maps/jquery.vmap.world.js"></script>
+	<script type="text/javascript" src="plugins/daterangepicker/moment.min.js"></script>
+	<script type="text/javascript" src="plugins/daterangepicker/daterangepicker.min.js"></script>
+	<script type="text/javascript" src="plugins/inputmask/jquery.inputmask.bundle.min.js"></script>
+	<script type="text/javascript" src="plugins/ckeditor/ckeditor.js"></script>
+	<script type="text/javascript" src="plugins/tinymce/tinymce.min.js"></script>
+	<script type="text/javascript" src="plugins/datatables/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="plugins/datatables/js/dataTables.semanticui.min.js"></script>
+	<script type="text/javascript" src="plugins/slick/slick.min.js"></script>
+	<script type="text/javascript" src="plugins/fullcalendar/fullcalendar.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+
+	<script type="text/javascript">
+		var ct1 = document.getElementById("chart1");
+		var line = Chart.Line(ct1, {
+		    data: {
+		        labels: ["2010", "2011", "2012", "2013", "2014", "2015"],
+		        datasets: [{
+		            label: 'Produk A',
+		         	yAxesGroup: "1",
+		         	type:'line',
+		            data: [12, 19, 3, 5, 2, 3],
+		            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+		            borderColor: 'rgba(153, 102, 255, 1)',
+		            borderWidth: 1
+		        },{
+		        	label: 'Produk B',
+		        	yAxesGroup: "2",
+		            data: [3, 10, 7, 4, 9, 16],
+		            backgroundColor: 'rgba(150, 20, 0, 0.2)',
+		            borderColor: 'rgba(200, 10, 0, 1)',
+		            borderWidth: 2
+		        }]
+		    },options: {
+		        title: {
+		            display: true,
+		            text: 'Grafik Pendapatan Pertahun'
+		        }
+		    }
+		});
+
+		var ct2 = document.getElementById("chart2");
+		var donut = new Chart(ct2, {
+		    type: 'doughnut',
+		    data: {
+			    labels: [
+			        "Red",
+			        "Blue",
+			        "Yellow"
+			    ],
+			    datasets: [
+			        {
+			            data: [300, 50, 100],
+			            backgroundColor: [
+			                "#FF6384",
+			                "#36A2EB",
+			                "#FFCE56"
+			            ],
+			            hoverBackgroundColor: [
+			                "#FF6384",
+			                "#36A2EB",
+			                "#FFCE56"
+			            ]
+			        }]
+			}
+		});
+
+		var ct3 = document.getElementById("chart3");
+		var pie = new Chart(ct3,{
+		    type: 'pie',
+		    data: {
+			    labels: [
+			        "Red",
+			        "Blue",
+			        "Yellow"
+			    ],
+			    datasets: [
+			        {
+			            data: [300, 50, 100],
+			            backgroundColor: [
+			                "#FF6384",
+			                "#36A2EB",
+			                "#FFCE56"
+			            ],
+			            hoverBackgroundColor: [
+			                "#FF6384",
+			                "#36A2EB",
+			                "#FFCE56"
+			            ]
+			        }]
+			}
+		});
+
+		var ct4 = document.getElementById("chart4");
+		var bar = new Chart(ct4, {
+		    type: 'bar',
+		    data: {
+			    labels: ["January", "February", "March", "April", "May", "June", "July"],
+			    datasets: [
+			        {
+			            label: "dataset",
+			            backgroundColor: [
+			                'rgba(255, 99, 132, 0.2)',
+			                'rgba(54, 162, 235, 0.2)',
+			                'rgba(255, 206, 86, 0.2)',
+			                'rgba(75, 192, 192, 0.2)',
+			                'rgba(153, 102, 255, 0.2)',
+			                'rgba(255, 159, 64, 0.2)'
+			            ],
+			            borderColor: [
+			                'rgba(255,99,132,1)',
+			                'rgba(54, 162, 235, 1)',
+			                'rgba(255, 206, 86, 1)',
+			                'rgba(75, 192, 192, 1)',
+			                'rgba(153, 102, 255, 1)',
+			                'rgba(255, 159, 64, 1)'
+			            ],
+			            borderWidth: 1,
+			            data: [65, 59, 80, 81, 56, 55, 40],
+			        }
+			    ]
+			}
+		});
+
+		var ct5 = document.getElementById("chart5");
+		var barHorizontal = new Chart(ct5, {
+		    type: 'horizontalBar',
+		    data: {
+			    labels: ["January", "February", "March", "April", "May", "June", "July"],
+			    datasets: [
+			        {
+			            label: "dataset",
+			            backgroundColor: [
+			                'rgba(255, 99, 132, 0.2)',
+			                'rgba(54, 162, 235, 0.2)',
+			                'rgba(255, 206, 86, 0.2)',
+			                'rgba(75, 192, 192, 0.2)',
+			                'rgba(153, 102, 255, 0.2)',
+			                'rgba(255, 159, 64, 0.2)'
+			            ],
+			            borderColor: [
+			                'rgba(255,99,132,1)',
+			                'rgba(54, 162, 235, 1)',
+			                'rgba(255, 206, 86, 1)',
+			                'rgba(75, 192, 192, 1)',
+			                'rgba(153, 102, 255, 1)',
+			                'rgba(255, 159, 64, 1)'
+			            ],
+			            borderWidth: 1,
+			            data: [65, 59, 80, 81, 56, 55, 40],
+			        }
+			    ]
+			}
+		});
+
+		var ct6 = document.getElementById("chart6");
+		var radar = new Chart(ct6, {
+		    type: 'radar',
+		    data: {
+			    labels: ["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"],
+			    datasets: [
+			        {
+			            label: "My First dataset",
+			            backgroundColor: "rgba(179,181,198,0.2)",
+			            borderColor: "rgba(179,181,198,1)",
+			            pointBackgroundColor: "rgba(179,181,198,1)",
+			            pointBorderColor: "#fff",
+			            pointHoverBackgroundColor: "#fff",
+			            pointHoverBorderColor: "rgba(179,181,198,1)",
+			            data: [65, 59, 90, 81, 56, 55, 40]
+			        },
+			        {
+			            label: "My Second dataset",
+			            backgroundColor: "rgba(255,99,132,0.2)",
+			            borderColor: "rgba(255,99,132,1)",
+			            pointBackgroundColor: "rgba(255,99,132,1)",
+			            pointBorderColor: "#fff",
+			            pointHoverBackgroundColor: "#fff",
+			            pointHoverBorderColor: "rgba(255,99,132,1)",
+			            data: [28, 48, 40, 19, 96, 27, 100]
+			        }
+			    ]
+			}
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pelindo Dashboard</title>
+	<link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
+	<link rel="stylesheet" type="text/css" href="plugins/fontawesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="plugins/jqvmap/jqvmap.min.css">
+	<link rel="stylesheet" type="text/css" href="plugins/daterangepicker/daterangepicker.min.css">
+	<link rel="stylesheet" type="text/css" href="plugins/datatables/css/jquery.dataTables.min.css">
+	<link rel="stylesheet" type="text/css" href="plugins/datatables/css/dataTables.semanticui.min.css">
+	<link rel="stylesheet" type="text/css" href="plugins/slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="plugins/fullcalendar/fullcalendar.min.css">
+	<link rel="stylesheet" type="text/css" href="plugins/fullcalendar/fullcalendar.print.css" media='print'>
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+
+	<style type="text/css">
+		footer div.ui.dark-gray, footer div.ui.inverted.segment{
+			background-image: url('images/black-orchid.png');
+			background-repeat: repeat;
+		}
+		body{
+			background-image: url('images/fabric-1-light.png');
+		}
+	</style>
+</head>
+<body>
+	<div class="line-top"></div>
+	<header class="ui labeled icon stackable tiny menu no-radius">
+		<div class="ui container">
+			<a class="item" href="dashboard.html"><i class="dashboard icon"></i>Dashboard</a>
+			<a class="item active" href="#"><i class="grid layout icon"></i>Widgets</a>
+			<div class="ui dropdown item">
+				<i class="edit icon"></i>
+				Forms
+				<div class="menu">
+					<a class="item" href="form_umum.html">Form Umum</a>
+					<a class="item" href="form_canggih.html">Form Canggih</a>
+					<a class="item" href="form_editor.html">Form Editor</a>
+				</div>
+			</div>
+			<div class="ui dropdown item">
+				<i class="table icon"></i>
+				Tables
+				<div class="menu">
+					<a class="item" href="semantic_table.html">Semantic Table</a>
+					<a class="item" href="data_table.html">Data Tables</a>
+				</div>
+			</div>
+			<a class="item" href="charts.html"><i class="area chart icon"></i>Charts</a>
+			<div class="ui dropdown item">
+				<i class="laptop icon"></i>
+				UI Elements
+				<div class="menu">
+					<a class="item" href="ui_umum.html">Umum</a>
+					<a class="item" href="ui_icons.html">Icon</a>
+					<a class="item" href="ui_typografi.html">Typografi</a>
+					<a class="item" href="ui_kalender.html">Kalender</a>
+				</div>
+			</div>
+			<div class="ui dropdown item">
+				<i class="long arrow down icon"></i>
+				Dropdown
+				<div class="menu">
+					<a class="item">Level1</a>
+					<a class="item">Level1</a>
+					<a class="item">
+						<i class="dropdown icon"></i>
+						Level1
+						<div class="menu">
+							<div class="item">Level2</div>
+							<div class="item">Level2</div>
+							<div class="item">
+								<i class="dropdown icon"></i>
+								Level2
+								<div class="menu">
+									<div class="item">Level3</div>
+									<div class="item">Level3</div>
+									<div class="item">Level3</div>
+								</div>
+							</div>
+							<div class="item">Level2</div>
+							<div class="item">Level2</div>
+							<div class="item">Level2</div>
+						</div>
+					</a>
+					<a class="item">Level1</a>
+				</div>
+			</div>
+
+			<div class="right menu">
+				<div class="ui fluid dropdown item">
+					<i class="bell icon"></i>
+					Pemberitahuan
+					<div class="menu">
+						<div class="header">Update Progress</div>
+						<div class="ui divider"></div>
+						<div class="item">
+							<div class="ui tiny indicating progress" data-value="40" data-total="200">
+								<div class="bar"></div>
+								<div class="label">Progress Kapal Laut</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="ui tiny indicating progress" data-value="40" data-total="100">
+								<div class="bar"></div>
+								<div class="label">Progress Kapal Perang</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="ui tiny indicating progress" data-value="2220" data-total="3000">
+								<div class="bar"></div>
+								<div class="label">Progress Kapal Ikan</div>
+							</div>
+						</div>
+						<div class="ui divider"></div>
+						<div class="item center aligned">
+							<a href="#">Lihat Semua Pemberitahuan</a>
+						</div>
+					</div>
+				</div>
+				<div class="ui dropdown item">
+					<i class="user icon"></i>
+					Akun
+					<div class="menu">
+						<div class="item"><i class="user icon"></i> Profile</div>
+						<a class="item"><i class="settings icon"></i> Pengaturan</a>
+						<div class="divider"></div>
+						<a class="item"><i class="sign out icon"></i> Keluar</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="ui container">
+		<h3 class="ui header title-page">Widgets</h3>
+	</div>
+
+
+	<div class="content">
+		<div class="ui container">
+			<div class="ui stackable grid">
+				<div class="four column row">
+					<div class="column">
+						<div class="ui segments">
+							<div class="ui red header segment">
+							Normal Segment
+							<div class="option-group">
+								<span title="minimise" class="minimise-button option-header-button">
+									<i class="radio icon"></i>
+								</span>
+								<span title="close" class="close-button option-header-button">
+									<i class="remove icon"></i>
+								</span>
+							</div>
+							</div>
+							<div class="ui center aligned segment">Isi</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="ui segments">
+							<div class="ui disabled green header segment">
+							disabled Segment
+							<div class="option-group">
+								<span title="minimise" class="minimise-button option-header-button">
+									<i class="radio icon"></i>
+								</span>
+								<span title="close" class="close-button option-header-button">
+									<i class="remove icon"></i>
+								</span>
+							</div>
+							</div>
+							<div class="ui disabled center aligned segment">Isi</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="ui segments">
+							<div class="ui yellow header segment">
+							Loading Segment
+							<div class="option-group">
+								<span title="minimise" class="minimise-button option-header-button">
+									<i class="radio icon"></i>
+								</span>
+								<span title="close" class="close-button option-header-button">
+									<i class="remove icon"></i>
+								</span>
+							</div>
+							</div>
+							<div class="ui loading center aligned segment">Isi</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="ui stacked segments">
+							<div class="ui purple header segment">
+							Stacked Segment
+							<div class="option-group">
+								<span title="minimise" class="minimise-button option-header-button">
+									<i class="radio icon"></i>
+								</span>
+								<span title="close" class="close-button option-header-button">
+									<i class="remove icon"></i>
+								</span>
+							</div>
+							</div>
+							<div class="ui center aligned segment">Isi</div>
+						</div>
+					</div>
+				</div><!-- three column row -->
+
+				<div class="eight column row">
+					<div class="column">
+						<div class="ui segments">
+							<div class="ui red header segment">
+							Red
+							</div>
+							<div class="ui center aligned segment">Isi</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="ui segments">
+							<div class="ui blue header segment">
+							Blue
+							</div>
+							<div class="ui center aligned segment">Isi</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="ui segments">
+							<div class="ui yellow header segment">
+							Yellow
+							</div>
+							<div class="ui center aligned segment">Isi</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="ui segments">
+							<div class="ui orange header segment">
+							Orange
+							</div>
+							<div class="ui center aligned segment">Isi</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="ui segments">
+							<div class="ui green header segment">
+							Green
+							</div>
+							<div class="ui center aligned segment">Isi</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="ui segments">
+							<div class="ui teal header segment">
+							Teal
+							</div>
+							<div class="ui center aligned segment">Isi</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="ui segments">
+							<div class="ui violet header segment">
+							Violet
+							</div>
+							<div class="ui center aligned segment">Isi</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="ui segments">
+							<div class="ui purple header segment">
+							Purple
+							</div>
+							<div class="ui center aligned segment">Isi</div>
+						</div>
+					</div>
+				</div><!-- eight column row -->
+
+				<div class="four column row">
+					<div class="column">
+						<div class="ui segments">
+							<div class="ui violet header segment">
+								Judul
+							</div>
+							<div class="ui segment">
+								Isi
+							</div>
+							<div class="ui bottom attached warning message">
+								<i class="icon help"></i>
+								Pesan peringatan bawah <a href="#">link</a>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="ui segments">
+							<div class="ui violet header segment">
+								Judul
+							</div>
+							<div class="ui segment">
+								Isi
+							</div>
+							<div class="ui bottom attached info message">
+								<i class="icon help"></i>
+								Pesan info bawah <a href="#">link</a>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="ui segments">
+							<div class="ui violet header segment">
+								Judul
+							</div>
+							<div class="ui segment">
+								Isi
+							</div>
+							<div class="ui bottom attached positive message">
+								<i class="icon help"></i>
+								Pesan sukses bawah <a href="#">link</a>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="ui segments">
+							<div class="ui violet header segment">
+								Judul
+							</div>
+							<div class="ui segment">
+								Isi
+							</div>
+							<div class="ui bottom attached negative message">
+								<i class="icon help"></i>
+								Pesan gagal bawah <a href="#">link</a>
+							</div>
+						</div>
+					</div>
+				</div><!-- four column row -->
+
+				<div class="three column row">
+					<div class="column">
+						<a class="ui fluid card" href="#">
+						  <div class="content">
+						    <div class="header">Link Card</div>
+						    <div class="meta">
+						      <span class="category">Animals</span>
+						    </div>
+						    <div class="description">
+						      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						    </div>
+						  </div>
+						  <div class="extra content">
+						    <div class="right floated author">
+						      <img class="ui avatar image" src="images/user2.png"> Matt
+						    </div>
+						  </div>
+						</a>
+
+						<div class="ui stacked segments">
+							<div class="ui yellow inverted segment">
+								Pesan dari Client
+								<div class="option-group">
+									<span title="minimise" class="minimise-button option-header-button">
+										<i class="radio icon"></i>
+									</span>
+									<span title="close" class="close-button option-header-button">
+										<i class="remove icon"></i>
+									</span>
+								</div>
+							</div>
+							<div class="ui scroll-segment segment" style="max-height: 400px;">
+								<div class="ui feed">
+								  <div class="event">
+								    <div class="label">
+								      <img src="images/user2.png">
+								    </div>
+								    <div class="content">
+								      <div class="summary">
+								        <a class="user">
+								          Elliot Fu
+								        </a> added you as a friend
+								        <div class="date">
+								          1 Hour Ago
+								        </div>
+								      </div>
+								      <div class="meta">
+								        <a class="like">
+								          <i class="like icon"></i> 4 Likes
+								        </a>
+								      </div>
+								    </div>
+								  </div>
+								  <div class="event">
+								    <div class="label">
+								      <img src="images/user2.png">
+								    </div>
+								    <div class="content">
+								      <div class="summary">
+								        <a>Helen Troy</a> added <a>2 new illustrations</a>
+								        <div class="date">
+								          4 days ago
+								        </div>
+								      </div>
+								      <div class="extra images">
+								        <a><img src="images/image.png"></a>
+								        <a><img src="images/image.png"></a>
+								      </div>
+								      <div class="meta">
+								        <a class="like">
+								          <i class="like icon"></i> 1 Like
+								        </a>
+								      </div>
+								    </div>
+								  </div>
+								  <div class="event">
+								    <div class="label">
+								      <img src="images/user1.png">
+								    </div>
+								    <div class="content">
+								      <div class="summary">
+								        <a class="user">
+								          Jenny Hess
+								        </a> added you as a friend
+								        <div class="date">
+								          2 Days Ago
+								        </div>
+								      </div>
+								      <div class="meta">
+								        <a class="like">
+								          <i class="like icon"></i> 8 Likes
+								        </a>
+								      </div>
+								    </div>
+								  </div>
+								  <div class="event">
+								    <div class="label">
+								      <img src="images/user1.png">
+								    </div>
+								    <div class="content">
+								      <div class="summary">
+								        <a>Joe Henderson</a> posted on his page
+								        <div class="date">
+								          3 days ago
+								        </div>
+								      </div>
+								      <div class="extra text">
+								        Ours is a life of constant reruns. We're always circling back to where we'd we started, then starting all over again. Even if we don't run extra laps that day, we surely will come back for more of the same another day soon.
+								      </div>
+								      <div class="meta">
+								        <a class="like">
+								          <i class="like icon"></i> 5 Likes
+								        </a>
+								      </div>
+								    </div>
+								  </div>
+								  <div class="event">
+								    <div class="label">
+								      <img src="images/user2.png">
+								    </div>
+								    <div class="content">
+								      <div class="summary">
+								        <a>Justen Kitsune</a> added <a>2 new photos</a> of you
+								        <div class="date">
+								          4 days ago
+								        </div>
+								      </div>
+								      <div class="extra images">
+								        <a><img src="images/image.png"></a>
+								        <a><img src="images/image.png"></a>
+								      </div>
+								      <div class="meta">
+								        <a class="like">
+								          <i class="like icon"></i> 41 Likes
+								        </a>
+								      </div>
+								    </div>
+								  </div>
+								</div>
+							</div>
+							<div class="ui segment">
+								<div class="ui fluid action input no-radius">
+									<input type="text" placeholder="Pesan">
+									<div class="ui button">Broadcast</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="ui fluid card">
+							<div class="content">
+								<img class="right floated mini ui image" src="images/user2.png">
+								<div class="header">
+									Elliot Fu
+								</div>
+								<div class="meta">
+									Friends of Veronika
+								</div>
+								<div class="description">
+									Elliot requested permission to view your contact details
+								</div>
+							</div>
+							<div class="extra content">
+								<div class="ui two buttons">
+									<div class="ui basic green button">Terima</div>
+									<div class="ui basic red button">Tolak</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="ui fluid card">
+							<div class="content">
+								<img class="right floated mini ui image" src="images/user2.png">
+								<div class="header">
+									Elliot Fu
+								</div>
+								<div class="meta">
+									Friends of Veronika
+								</div>
+								<div class="description">
+									Elliot requested permission to view your contact details
+								</div>
+							</div>
+							<div class="extra content">
+								<div class="ui two buttons">
+									<div class="ui basic green button">Terima</div>
+									<div class="ui basic red button">Tolak</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="ui stacked segments">
+							<div class="ui teal header segment">
+								Pesan dari Client
+								<div class="option-group">
+									<span title="minimise" class="minimise-button option-header-button">
+										<i class="radio icon"></i>
+									</span>
+									<span title="close" class="close-button option-header-button">
+										<i class="remove icon"></i>
+									</span>
+								</div>
+							</div>
+							<div class="ui secondary scroll-segment segment" style="max-height: 400px;">
+								<div class="ui feed">
+								  <div class="event">
+								    <div class="label">
+								      <img src="images/user2.png">
+								    </div>
+								    <div class="content">
+								      <div class="summary">
+								        <a class="user">
+								          Elliot Fu
+								        </a> added you as a friend
+								        <div class="date">
+								          1 Hour Ago
+								        </div>
+								      </div>
+								      <div class="meta">
+								        <a class="like">
+								          <i class="like icon"></i> 4 Likes
+								        </a>
+								      </div>
+								    </div>
+								  </div>
+								  <div class="event">
+								    <div class="label">
+								      <img src="images/user2.png">
+								    </div>
+								    <div class="content">
+								      <div class="summary">
+								        <a>Helen Troy</a> added <a>2 new illustrations</a>
+								        <div class="date">
+								          4 days ago
+								        </div>
+								      </div>
+								      <div class="extra images">
+								        <a><img src="images/image.png"></a>
+								        <a><img src="images/image.png"></a>
+								      </div>
+								      <div class="meta">
+								        <a class="like">
+								          <i class="like icon"></i> 1 Like
+								        </a>
+								      </div>
+								    </div>
+								  </div>
+								  <div class="event">
+								    <div class="label">
+								      <img src="images/user1.png">
+								    </div>
+								    <div class="content">
+								      <div class="summary">
+								        <a class="user">
+								          Jenny Hess
+								        </a> added you as a friend
+								        <div class="date">
+								          2 Days Ago
+								        </div>
+								      </div>
+								      <div class="meta">
+								        <a class="like">
+								          <i class="like icon"></i> 8 Likes
+								        </a>
+								      </div>
+								    </div>
+								  </div>
+								  <div class="event">
+								    <div class="label">
+								      <img src="images/user1.png">
+								    </div>
+								    <div class="content">
+								      <div class="summary">
+								        <a>Joe Henderson</a> posted on his page
+								        <div class="date">
+								          3 days ago
+								        </div>
+								      </div>
+								      <div class="extra text">
+								        Ours is a life of constant reruns. We're always circling back to where we'd we started, then starting all over again. Even if we don't run extra laps that day, we surely will come back for more of the same another day soon.
+								      </div>
+								      <div class="meta">
+								        <a class="like">
+								          <i class="like icon"></i> 5 Likes
+								        </a>
+								      </div>
+								    </div>
+								  </div>
+								  <div class="event">
+								    <div class="label">
+								      <img src="images/user2.png">
+								    </div>
+								    <div class="content">
+								      <div class="summary">
+								        <a>Justen Kitsune</a> added <a>2 new photos</a> of you
+								        <div class="date">
+								          4 days ago
+								        </div>
+								      </div>
+								      <div class="extra images">
+								        <a><img src="images/image.png"></a>
+								        <a><img src="images/image.png"></a>
+								      </div>
+								      <div class="meta">
+								        <a class="like">
+								          <i class="like icon"></i> 41 Likes
+								        </a>
+								      </div>
+								    </div>
+								  </div>
+								</div>
+							</div>
+							<div class="ui segment">
+								<div class="ui fluid action input no-radius">
+									<input type="text" placeholder="Pesan">
+									<div class="ui button">Broadcast</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="ui fluid card">
+						  <div class="content">
+						    <div class="right floated meta">14h</div>
+						    <img class="ui avatar image" src="images/user1.png"> Elliot
+						  </div>
+						  <div class="image">
+						    <img src="images/image.png">
+						  </div>
+						  <div class="content">
+						    <span class="right floated">
+						      <i class="heart outline like icon"></i>
+						      17 likes
+						    </span>
+						    <i class="comment icon"></i>
+						    3 comments
+						  </div>
+						  <div class="extra content">
+						    <div class="ui large transparent left icon input">
+						      <i class="heart outline icon"></i>
+						      <input type="text" placeholder="Add Comment...">
+						    </div>
+						  </div>
+						</div>
+
+						<div class="ui stacked segments">
+							<div class="ui red inverted segment">
+								Pesan dari Client
+								<div class="option-group">
+									<span title="minimise" class="minimise-button option-header-button">
+										<i class="radio icon"></i>
+									</span>
+									<span title="close" class="close-button option-header-button">
+										<i class="remove icon"></i>
+									</span>
+								</div>
+							</div>
+							<div class="ui secondary scroll-segment segment" style="max-height: 400px;">
+								<div class="ui feed">
+								  <div class="event">
+								    <div class="label">
+								      <img src="images/user2.png">
+								    </div>
+								    <div class="content">
+								      <div class="summary">
+								        <a class="user">
+								          Elliot Fu
+								        </a> added you as a friend
+								        <div class="date">
+								          1 Hour Ago
+								        </div>
+								      </div>
+								      <div class="meta">
+								        <a class="like">
+								          <i class="like icon"></i> 4 Likes
+								        </a>
+								      </div>
+								    </div>
+								  </div>
+								  <div class="event">
+								    <div class="label">
+								      <img src="images/user2.png">
+								    </div>
+								    <div class="content">
+								      <div class="summary">
+								        <a>Helen Troy</a> added <a>2 new illustrations</a>
+								        <div class="date">
+								          4 days ago
+								        </div>
+								      </div>
+								      <div class="extra images">
+								        <a><img src="images/image.png"></a>
+								        <a><img src="images/image.png"></a>
+								      </div>
+								      <div class="meta">
+								        <a class="like">
+								          <i class="like icon"></i> 1 Like
+								        </a>
+								      </div>
+								    </div>
+								  </div>
+								  <div class="event">
+								    <div class="label">
+								      <img src="images/user1.png">
+								    </div>
+								    <div class="content">
+								      <div class="summary">
+								        <a class="user">
+								          Jenny Hess
+								        </a> added you as a friend
+								        <div class="date">
+								          2 Days Ago
+								        </div>
+								      </div>
+								      <div class="meta">
+								        <a class="like">
+								          <i class="like icon"></i> 8 Likes
+								        </a>
+								      </div>
+								    </div>
+								  </div>
+								  <div class="event">
+								    <div class="label">
+								      <img src="images/user1.png">
+								    </div>
+								    <div class="content">
+								      <div class="summary">
+								        <a>Joe Henderson</a> posted on his page
+								        <div class="date">
+								          3 days ago
+								        </div>
+								      </div>
+								      <div class="extra text">
+								        Ours is a life of constant reruns. We're always circling back to where we'd we started, then starting all over again. Even if we don't run extra laps that day, we surely will come back for more of the same another day soon.
+								      </div>
+								      <div class="meta">
+								        <a class="like">
+								          <i class="like icon"></i> 5 Likes
+								        </a>
+								      </div>
+								    </div>
+								  </div>
+								  <div class="event">
+								    <div class="label">
+								      <img src="images/user2.png">
+								    </div>
+								    <div class="content">
+								      <div class="summary">
+								        <a>Justen Kitsune</a> added <a>2 new photos</a> of you
+								        <div class="date">
+								          4 days ago
+								        </div>
+								      </div>
+								      <div class="extra images">
+								        <a><img src="images/image.png"></a>
+								        <a><img src="images/image.png"></a>
+								      </div>
+								      <div class="meta">
+								        <a class="like">
+								          <i class="like icon"></i> 41 Likes
+								        </a>
+								      </div>
+								    </div>
+								  </div>
+								</div>
+							</div>
+							<div class="ui segment">
+								<div class="ui fluid action input no-radius">
+									<input type="text" placeholder="Pesan">
+									<div class="ui button">Broadcast</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!-- three column row -->
+			</div>
+		</div><!-- container -->
+	</div><!-- content -->
+
+		<footer class="ui segments" style="border-radius:0px 0px 0px 0px!important;margin-bottom: -1px;margin-left: -1px;">
+		<div class="ui dark-gray very padded segment no-radius">
+			<div class="ui four column doubling stackable grid container">
+			  <div class="column">
+			  	<h5 class="ui white header">About Kurniawan Template</h5>
+			    <div class="ui link list">
+					<a class="item">agungkurniawan.me</a>
+					<a class="item">Web Developer</a>
+					<a class="item">Responsive HTML Portofolio</a>
+					<a class="item">Free Script Resources</a>
+				</div>
+			  </div>
+			  <div class="column">
+			    <h5 class="ui white header">Support</h5>
+			    <div class="ui link list">
+					<a class="item">Frequently Asked Questions</a>
+					<a class="item">Ask Question</a>
+					<a class="item">Tutorial</a>
+					<a class="item">Feedback</a>
+				</div>
+			  </div>
+			  <div class="column">
+			    <h5 class="ui white header">Plugins</h5>
+			    <div class="ui link list">
+					<a class="item">Jquery</a>
+					<a class="item">Semantic-ui</a>
+					<a class="item">jqvmap</a>
+				</div>
+			  </div>
+			  <div class="column">
+			    <h5 class="ui white header">Legal</h5>
+			    <div class="ui link list">
+					<a class="item">Read License</a>
+					<a class="item">Web Developer</a>
+					<a class="item">Responsive HTML Portofolio</a>
+				</div>
+			  </div>
+			</div>
+		</div>
+		<div class="ui inverted segment no-radius">
+			<div class="ui container">
+				&copy; 2016 Agung Kurniawan@<a href="http://thaybah.id" target="_blank">Thaybah Surabaya</a>
+			</div>
+		</div>
+	</footer>
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="semantic/semantic.min.js"></script>
+	<script type="text/javascript" src="plugins/chartjs/Chart.bundle.min.js"></script>
+	<script type="text/javascript" src="plugins/jqvmap/jquery.vmap.min.js"></script>
+	<script type="text/javascript" src="plugins/jqvmap/maps/jquery.vmap.world.js"></script>
+	<script type="text/javascript" src="plugins/daterangepicker/moment.min.js"></script>
+	<script type="text/javascript" src="plugins/daterangepicker/daterangepicker.min.js"></script>
+	<script type="text/javascript" src="plugins/inputmask/jquery.inputmask.bundle.min.js"></script>
+	<script type="text/javascript" src="plugins/ckeditor/ckeditor.js"></script>
+	<script type="text/javascript" src="plugins/tinymce/tinymce.min.js"></script>
+	<script type="text/javascript" src="plugins/datatables/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="plugins/datatables/js/dataTables.semanticui.min.js"></script>
+	<script type="text/javascript" src="plugins/slick/slick.min.js"></script>
+	<script type="text/javascript" src="plugins/fullcalendar/fullcalendar.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>

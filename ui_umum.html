@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pelindo Dashboard</title>
+	<link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
+	<link rel="stylesheet" type="text/css" href="plugins/fontawesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="plugins/jqvmap/jqvmap.min.css">
+	<link rel="stylesheet" type="text/css" href="plugins/daterangepicker/daterangepicker.min.css">
+	<link rel="stylesheet" type="text/css" href="plugins/datatables/css/jquery.dataTables.min.css">
+	<link rel="stylesheet" type="text/css" href="plugins/datatables/css/dataTables.semanticui.min.css">
+	<link rel="stylesheet" type="text/css" href="plugins/slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="plugins/fullcalendar/fullcalendar.min.css">
+	<link rel="stylesheet" type="text/css" href="plugins/fullcalendar/fullcalendar.print.css" media='print'>
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+
+	<style type="text/css">
+		footer div.ui.dark-gray, footer div.ui.inverted.segment{
+			background-image: url('images/black-orchid.png');
+			background-repeat: repeat;
+		}
+		body{
+			background-image: url('images/fabric-1-light.png');
+		}
+	</style>
+</head>
+<body>
+	<div class="line-top"></div>
+	<header class="ui labeled icon stackable tiny menu no-radius">
+		<div class="ui container">
+			<a class="item" href="dashboard.html"><i class="dashboard icon"></i>Dashboard</a>
+			<a class="item" href="widgets.html"><i class="grid layout icon"></i>Widgets</a>
+			<div class="ui dropdown item">
+				<i class="edit icon"></i>
+				Forms
+				<div class="menu">
+					<a class="item" href="form_umum.html">Form Umum</a>
+					<a class="item" href="form_canggih.html">Form Canggih</a>
+					<a class="item" href="form_editor.html">Form Editor</a>
+				</div>
+			</div>
+			<div class="ui dropdown item">
+				<i class="table icon"></i>
+				Tables
+				<div class="menu">
+					<a class="item" href="semantic_table.html">Semantic Table</a>
+					<a class="item" href="data_table.html">Data Tables</a>
+				</div>
+			</div>
+			<a class="item" href="charts.html"><i class="area chart icon"></i>Charts</a>
+			<div class="ui dropdown item">
+				<i class="laptop icon"></i>
+				UI Elements
+				<div class="menu">
+					<a class="item active" href="#">Umum</a>
+					<a class="item" href="ui_icons.html">Icon</a>
+					<a class="item" href="ui_typografi.html">Typografi</a>
+					<a class="item" href="ui_kalender.html">Kalender</a>
+				</div>
+			</div>
+			<div class="ui dropdown item">
+				<i class="long arrow down icon"></i>
+				Dropdown
+				<div class="menu">
+					<a class="item">Level1</a>
+					<a class="item">Level1</a>
+					<a class="item">
+						<i class="dropdown icon"></i>
+						Level1
+						<div class="menu">
+							<div class="item">Level2</div>
+							<div class="item">Level2</div>
+							<div class="item">
+								<i class="dropdown icon"></i>
+								Level2
+								<div class="menu">
+									<div class="item">Level3</div>
+									<div class="item">Level3</div>
+									<div class="item">Level3</div>
+								</div>
+							</div>
+							<div class="item">Level2</div>
+							<div class="item">Level2</div>
+							<div class="item">Level2</div>
+						</div>
+					</a>
+					<a class="item">Level1</a>
+				</div>
+			</div>
+
+			<div class="right menu">
+				<div class="ui fluid dropdown item">
+					<i class="bell icon"></i>
+					Pemberitahuan
+					<div class="menu">
+						<div class="header">Update Progress</div>
+						<div class="ui divider"></div>
+						<div class="item">
+							<div class="ui tiny indicating progress" data-value="40" data-total="200">
+								<div class="bar"></div>
+								<div class="label">Progress Kapal Laut</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="ui tiny indicating progress" data-value="40" data-total="100">
+								<div class="bar"></div>
+								<div class="label">Progress Kapal Perang</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="ui tiny indicating progress" data-value="2220" data-total="3000">
+								<div class="bar"></div>
+								<div class="label">Progress Kapal Ikan</div>
+							</div>
+						</div>
+						<div class="ui divider"></div>
+						<div class="item center aligned">
+							<a href="#">Lihat Semua Pemberitahuan</a>
+						</div>
+					</div>
+				</div>
+				<div class="ui dropdown item">
+					<i class="user icon"></i>
+					Akun
+					<div class="menu">
+						<div class="item"><i class="user icon"></i> Profile</div>
+						<a class="item"><i class="settings icon"></i> Pengaturan</a>
+						<div class="divider"></div>
+						<a class="item"><i class="sign out icon"></i> Keluar</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="ui container">
+		<h3 class="ui header title-page">Form Umum</h3>
+	</div>
+
+
+	<div class="content">
+		<div class="ui container">
+			<div class="ui stackable grid">
+				<div class="sixteen wide column">
+					<div class="ui stacked segments">
+						<div class="ui orange inverted segment">Button</div>
+						<div class="ui center aligned segment">
+							<button class="ui button">Standart</button>
+							<button class="ui primary button">Primay</button>
+							<button class="ui secondary button">Secondary</button>
+							<div class="ui animated button" tabindex="0">
+								<div class="visible content">Animate</div>
+								<div class="hidden content">
+									<i class="right arrow icon"></i>
+								</div>
+							</div>
+							<div class="ui vertical animated button" tabindex="0">
+								<div class="hidden content">Animate</div>
+								<div class="visible content">
+									<i class="shop icon"></i>
+								</div>
+							</div>
+							<div class="ui animated fade button" tabindex="0">
+								<div class="visible content">Animate</div>
+								<div class="hidden content">
+									$12.99 a month
+								</div>
+							</div>
+							<div class="ui labeled button" tabindex="0">
+								<div class="ui red button">
+									<i class="heart icon"></i> Like
+								</div>
+								<a class="ui basic red left pointing label">
+									1,048
+								</a>
+							</div>
+							<div class="ui labeled button" tabindex="0">
+								<div class="ui blue button">
+									<i class="fork icon"></i> Forks
+								</div>
+								<a class="ui basic left pointing blue label">
+									1,048
+								</a>
+							</div>
+							<button class="ui icon button">
+								<i class="cloud icon"></i>
+							</button>
+							<div class="ui buttons">
+								<button class="ui button">One</button>
+								<button class="ui button">Two</button>
+								<button class="ui button">Three</button>
+							</div>
+							<div class="ui buttons">
+								<button class="ui button">Cancel</button>
+								<div class="or"></div>
+								<button class="ui positive button">Save</button>
+							</div>
+							<button class="ui basic button">
+								<i class="icon user"></i>
+								Basic
+							</button>
+							<div class="ui divider"></div>
+							<button class="ui loading button">Loading</button>
+							<button class="ui basic loading button">Loading</button>
+							<button class="ui primary loading button">Loading</button>
+							<button class="ui secondary loading button">Loading</button>
+							<button class="ui facebook button">
+								<i class="facebook icon"></i>
+								Facebook
+							</button>
+							<button class="ui twitter button">
+								<i class="twitter icon"></i>
+								Twitter
+							</button>
+							<button class="ui google plus button">
+								<i class="google plus icon"></i>
+								Google Plus
+							</button>
+							<button class="ui vk button">
+								<i class="vk icon"></i>
+								VK
+							</button>
+							<button class="ui linkedin button">
+								<i class="linkedin icon"></i>
+								LinkedIn
+							</button>
+							<button class="ui instagram button">
+								<i class="instagram icon"></i>
+								Instagram
+							</button>
+							<button class="ui youtube button">
+								<i class="youtube icon"></i>
+								YouTube
+							</button>
+							<div class="ui divider"></div>
+							<button class="mini ui button">
+								Mini
+							</button>
+							<button class="tiny ui button">
+								Tiny
+							</button>
+							<button class="small ui button">
+								Small
+							</button>
+							<button class="medium ui button">
+								Medium
+							</button>
+							<button class="large ui button">
+								Large
+							</button>
+							<button class="big ui button">
+								Big
+							</button>
+							<button class="huge ui button">
+								Huge
+							</button>
+							<button class="massive ui button">
+								Massive
+							</button>
+							<div class="ui divider"></div>
+							<button class="ui red button">Red</button>
+							<button class="ui orange button">Orange</button>
+							<button class="ui yellow button">Yellow</button>
+							<button class="ui olive button">Olive</button>
+							<button class="ui green button">Green</button>
+							<button class="ui teal button">Teal</button>
+							<button class="ui blue button">Blue</button>
+							<button class="ui violet button">Violet</button>
+							<button class="ui purple button">Purple</button>
+							<button class="ui pink button">Pink</button>
+							<button class="ui brown button">Brown</button>
+							<button class="ui grey button">Grey</button>
+							<button class="ui black button">Black</button>
+							<div class="ui divider"></div>
+							<button class="fluid ui negative button">fluid</button>
+							<div class="ui divider"></div>
+							<button class="ui circular facebook icon button">
+								<i class="facebook icon"></i>
+							</button>
+							<button class="ui circular twitter icon button">
+								<i class="twitter icon"></i>
+							</button>
+							<button class="ui circular linkedin icon button">
+								<i class="linkedin icon"></i>
+							</button>
+							<button class="ui circular google plus icon button">
+								<i class="google plus icon"></i>
+							</button>
+							<div class="ui divider"></div>
+							<div class="ui vertical basic buttons">
+								<button class="ui button">One</button>
+								<button class="ui button">Two</button>
+								<button class="ui button">Three</button>
+							</div>
+							<div class="ui small vertical basic icon buttons">
+								<button class="ui button"><i class="file icon"></i></button>
+								<button class="ui button"><i class="save icon"></i></button>
+								<button class="ui button"><i class="upload icon"></i></button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="sixteen wide column">
+					<div class="ui stacked segments">
+						<div class="ui green header segment">
+							Modal
+						</div>
+						<div class="ui center aligned segment">
+							<button class="ui mini primary button" onclick="showModalStandart()">Modal Standart</button>
+							<button class="ui mini primary button" onclick="showModalHorizontal()">Modal Horizontal Flip Animation</button>
+							<button class="ui mini primary button" onclick="showModalVertical()">Modal Vertical Flip Animation</button>
+							<button class="ui mini primary button" onclick="showModalFade()">Modal Fade</button>
+							<button class="ui mini primary button" onclick="showModalFadeUp()">Modal Fade Up</button>
+							<button class="ui mini primary button" onclick="showModalScale()">Modal Scale</button>
+							<button class="ui mini primary button" onclick="showModalLightDimmer()">Modal Light Dimmer</button>
+							<button class="ui mini primary button" onclick="showModalBlurDimmer()">Modal Blur Dimmer</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="three column row">
+					<div class="column">
+						<div class="ui stacked segments">
+							<div class="ui purple inverted segment">
+								Pesan
+							</div>
+							<div class="ui segment">
+								<div class="ui message">
+									<div class="header">
+										Pesan Biasa
+									</div>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									</p>
+								</div>
+								<div class="ui message">
+									<div class="header">
+									List
+									</div>
+									<ul class="list">
+										<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+										<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+									</ul>
+								</div>
+								<div class="ui icon message">
+									<i class="inbox icon"></i>
+									<div class="content">
+										<div class="header">
+										Dengan Icon
+										</div>
+										<p>Get the best news in your e-mail every day.</p>
+									</div>
+								</div>
+								<div class="ui message">
+									<i class="close icon"></i>
+									<div class="header">
+										Dismiss
+									</div>
+									<p>This is a special notification which you can dismiss if you're bored with it.</p>
+								</div>
+								<div class="ui warning message">
+									<i class="close icon"></i>
+									<div class="header">
+										Warning
+									</div>
+									Visit our registration page, then try again
+								</div>
+								<div class="ui info message">
+									<i class="close icon"></i>
+									<div class="header">
+										info
+									</div>
+									Visit our registration page, then try again
+								</div>
+								<div class="ui positive message">
+									<i class="close icon"></i>
+									<div class="header">
+										Positive
+									</div>
+									Visit our registration page, then try again
+								</div>
+								<div class="ui negative message">
+									<i class="close icon"></i>
+									<div class="header">
+										Negative
+									</div>
+									Visit our registration page, then try again
+								</div>
+							</div>
+						</div><!-- segments -->
+					</div>
+
+					<div class="column">
+						<div class="ui stacked segments">
+							<div class="ui violet inverted segment">
+								Tab
+							</div>
+							<div class="ui segment">
+								<h5 class="ui header">Top Tab</h5>
+								<div class="ui top attached tabular menu">
+									<a class="item item-tab active" data-tab="tab1">Tab 1</a>
+									<a class="item item-tab " data-tab="tab2">Tab 2</a>
+									<a class="item item-tab " data-tab="tab3">Tab 3</a>
+								</div>
+								<div class="ui bottom attached tab segment active" data-tab="tab1">
+									Tab1
+								</div>
+								<div class="ui bottom attached tab segment" data-tab="tab2">
+									Tab2
+								</div>
+								<div class="ui bottom attached tab segment" data-tab="tab3">
+									Tab3
+								</div>
+							</div>
+							<div class="ui segment">
+								<h5 class="ui header">Buttom Tab</h5>
+								<div class="ui top attached tab segment active" data-tab="project1">
+									<p>Project 1</p>
+								</div>
+								<div class="ui top attached tab segment" data-tab="project2">
+									<p>Project 2</p>
+								</div>
+								<div class="ui top attached tab segment" data-tab="project3">
+									<p>Project 3</p>
+								</div>
+								<div class="ui bottom attached tabular menu">
+									<a class="item item-tab active" data-tab="project1">
+										Project #1
+									</a>
+									<a class="item item-tab" data-tab="project2">
+										Project #2
+									</a>
+									<a class="item item-tab" data-tab="project3">
+										Project #3
+									</a>
+								</div>
+							</div>
+							<div class="ui segment">
+								<h5 class="ui header">Left Tab</h5>
+								<div class="ui grid">
+									<div class="eight wide column">
+										<div class="ui vertical fluid tabular menu">
+											<a class="item item-tab active" data-tab="left1">
+											Bio
+											</a>
+											<a class="item item-tab" data-tab="left2">
+											Pics
+											</a>
+											<a class="item item-tab" data-tab="left3">
+											Companies
+											</a>
+											<a class="item item-tab" data-tab="left4">
+											Links
+											</a>
+										</div>
+									</div>
+									<div class="eight wide stretched column">
+										<div class="ui tab segment active" data-tab="left1">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										</div>
+										<div class="ui tab segment" data-tab="left2">
+											<img src="images/image.png" class="ui image">
+										</div>
+										<div class="ui tab segment" data-tab="left3">
+										This is an stretched grid column. This segment will always match the tab height
+										</div>
+										<div class="ui tab segment" data-tab="left4">
+											<a href="http://agungkurniawan.me">Agung Kurniawan</a>
+											<a href="http://agungkurniawan.me">Yussa</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="ui segment">
+							<h5 class="ui header">Right Tab</h5>
+								<div class="ui grid">
+									<div class="eight wide stretched column">
+										<div class="ui tab segment active" data-tab="right1">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										</div>
+										<div class="ui tab segment" data-tab="right2">
+											<img src="images/image.png" class="ui image">
+										</div>
+										<div class="ui tab segment" data-tab="right3">
+										This is an stretched grid column. This segment will always match the tab height
+										</div>
+										<div class="ui tab segment" data-tab="right4">
+											<a href="http://agungkurniawan.me">Agung Kurniawan</a>
+											<a href="http://agungkurniawan.me">Yussa</a>
+										</div>
+									</div>
+									<div class="eight wide column">
+										<div class="ui vertical fluid right tabular menu">
+											<a class="item item-tab active" data-tab="right1">
+											Bio
+											</a>
+											<a class="item item-tab" data-tab="right2">
+											Pics
+											</a>
+											<a class="item item-tab" data-tab="right3">
+											Companies
+											</a>
+											<a class="item item-tab" data-tab="right4">
+											Links
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div><!-- segments -->
+					</div>
+
+					<div class="column">
+						<div class="ui stacked segments">
+							<div class="ui red inverted segment">
+								Progress
+							</div>
+							<div class="ui segment">
+								<div class="ui progress" data-value="40" data-total="200">
+									<div class="bar">
+										<div class="progress"></div>
+									</div>
+									<div class="label">Standart</div>
+								</div>
+								<div class="ui indicating progress" data-value="40" data-total="100">
+									<div class="bar"></div>
+									<div class="label">Indikasi</div>
+								</div>
+								<div class="ui progress success" data-value="100" data-total="100">
+									<div class="bar">
+										<div class="progress"></div>
+									</div>
+									<div class="label">Success</div>
+								</div>
+								<div class="ui progress warning">
+									<div class="bar">
+										<div class="progress"></div>
+									</div>
+									<div class="label">Warning</div>
+								</div>
+								<div class="ui progress error">
+									<div class="bar">
+										<div class="progress"></div>
+									</div>
+									<div class="label">Error</div>
+								</div>
+								<div class="ui tiny progress">
+									<div class="bar"></div>
+									<div class="label">Tiny</div>
+								</div>
+								<div class="ui small progress">
+									<div class="bar"></div>
+									<div class="label">Small</div>
+								</div>
+								<div class="ui progress">
+									<div class="bar"></div>
+									<div class="label">Standard</div>
+								</div>
+								<div class="ui large progress">
+									<div class="bar"></div>
+									<div class="label">Large</div>
+								</div>
+								<div class="ui big progress">
+									<div class="bar"></div>
+									<div class="label">Big</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="ui eight wide column">
+					<div class="ui stacked segments">
+						<div class="ui blue inverted segment">
+							Slider
+						</div>
+						<div class="ui segment">
+							<div class="slick-slider">
+								<div><img class="ui fluid image" src="images/slider1.jpg"></div>
+								<div><img class="ui fluid image" src="images/slider2.jpg"></div>
+								<div><img class="ui fluid image" src="images/slider3.jpg"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="ui eight wide column">
+					<div class="ui stacked segments">
+						<div class="ui yellow inverted segment">
+							Accordion
+						</div>
+						<div class="ui segment">
+							<div class="ui styled accordion">
+							  <div class="active title">
+							    <i class="dropdown icon"></i>
+							    What is a dog?
+							  </div>
+							  <div class="active content">
+							    <p>A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.</p>
+							  </div>
+							  <div class="title">
+							    <i class="dropdown icon"></i>
+							    What kinds of dogs are there?
+							  </div>
+							  <div class="content">
+							    <p>There are many breeds of dogs. Each breed varies in size and temperament. Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.</p>
+							  </div>
+							  <div class="title">
+							    <i class="dropdown icon"></i>
+							    How do you acquire a dog?
+							  </div>
+							  <div class="content">
+							    <p>Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or shelters.</p>
+							    <p>A pet shop may be the most convenient way to buy a dog. Buying a dog from a private owner allows you to assess the pedigree and upbringing of your dog before choosing to take it home. Lastly, finding your dog from a shelter, helps give a good home to a dog who may not find one so readily.</p>
+							  </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- container -->
+	</div><!-- content -->
+
+	<div class="ui modal" id="modal1">
+		<i class="close icon"></i>
+		<div class="header">
+			Modal Standart
+		</div>
+		<div class="content">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</div>
+		<div class="actions">
+			<div class="ui button">Cancel</div>
+			<div class="ui button">OK</div>
+		</div>
+	</div>
+
+		<footer class="ui segments" style="border-radius:0px 0px 0px 0px!important;margin-bottom: -1px;margin-left: -1px;">
+		<div class="ui dark-gray very padded segment no-radius">
+			<div class="ui four column doubling stackable grid container">
+			  <div class="column">
+			  	<h5 class="ui white header">About Kurniawan Template</h5>
+			    <div class="ui link list">
+					<a class="item">agungkurniawan.me</a>
+					<a class="item">Web Developer</a>
+					<a class="item">Responsive HTML Portofolio</a>
+					<a class="item">Free Script Resources</a>
+				</div>
+			  </div>
+			  <div class="column">
+			    <h5 class="ui white header">Support</h5>
+			    <div class="ui link list">
+					<a class="item">Frequently Asked Questions</a>
+					<a class="item">Ask Question</a>
+					<a class="item">Tutorial</a>
+					<a class="item">Feedback</a>
+				</div>
+			  </div>
+			  <div class="column">
+			    <h5 class="ui white header">Plugins</h5>
+			    <div class="ui link list">
+					<a class="item">Jquery</a>
+					<a class="item">Semantic-ui</a>
+					<a class="item">jqvmap</a>
+				</div>
+			  </div>
+			  <div class="column">
+			    <h5 class="ui white header">Legal</h5>
+			    <div class="ui link list">
+					<a class="item">Read License</a>
+					<a class="item">Web Developer</a>
+					<a class="item">Responsive HTML Portofolio</a>
+				</div>
+			  </div>
+			</div>
+		</div>
+		<div class="ui inverted segment no-radius">
+			<div class="ui container">
+				&copy; 2016 Agung Kurniawan@<a href="http://thaybah.id" target="_blank">Thaybah Surabaya</a>
+			</div>
+		</div>
+	</footer>
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="semantic/semantic.min.js"></script>
+	<script type="text/javascript" src="plugins/chartjs/Chart.bundle.min.js"></script>
+	<script type="text/javascript" src="plugins/jqvmap/jquery.vmap.min.js"></script>
+	<script type="text/javascript" src="plugins/jqvmap/maps/jquery.vmap.world.js"></script>
+	<script type="text/javascript" src="plugins/daterangepicker/moment.min.js"></script>
+	<script type="text/javascript" src="plugins/daterangepicker/daterangepicker.min.js"></script>
+	<script type="text/javascript" src="plugins/inputmask/jquery.inputmask.bundle.min.js"></script>
+	<script type="text/javascript" src="plugins/ckeditor/ckeditor.js"></script>
+	<script type="text/javascript" src="plugins/tinymce/tinymce.min.js"></script>
+	<script type="text/javascript" src="plugins/datatables/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="plugins/datatables/js/dataTables.semanticui.min.js"></script>
+	<script type="text/javascript" src="plugins/slick/slick.min.js"></script>
+	<script type="text/javascript" src="plugins/fullcalendar/fullcalendar.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.slick-slider').slick({
+				infinite: true,
+				dots: false,
+			    prevArrow: false,
+			    nextArrow: false,
+			    autoplay: true
+			});
+		});
+
+		function showModalStandart() {
+			$("#modal1").modal('show');
+		}
+
+		function showModalHorizontal() {
+			$("#modal1").modal('setting', 'transition', 'horizontal flip').modal('show');
+		}
+
+		function showModalVertical() {
+			$("#modal1").modal('setting', 'transition', 'vertical flip').modal('show');
+		}
+
+		function showModalFade() {
+			$("#modal1").modal('setting', 'transition', 'fade').modal('show');
+		}
+
+		function showModalFadeUp() {
+			$("#modal1").modal('setting', 'transition', 'fade up').modal('show');
+		}
+
+		function showModalScale() {
+			$("#modal1").modal('setting', 'transition', 'scale').modal('show');
+		}
+
+		function showModalLightDimmer() {
+			$("#modal1").modal({inverted: true}).modal('show');
+		}
+
+		function showModalBlurDimmer() {
+			$("#modal1").modal({blurring: true}).modal('show');
+		}
+	</script>
+</body>
+</html>

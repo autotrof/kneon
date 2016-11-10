@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pelindo Dashboard</title>
+	<link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
+	<link rel="stylesheet" type="text/css" href="plugins/fontawesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="plugins/jqvmap/jqvmap.min.css">
+	<link rel="stylesheet" type="text/css" href="plugins/daterangepicker/daterangepicker.min.css">
+	<link rel="stylesheet" type="text/css" href="plugins/datatables/css/jquery.dataTables.min.css">
+	<link rel="stylesheet" type="text/css" href="plugins/datatables/css/dataTables.semanticui.min.css">
+	<link rel="stylesheet" type="text/css" href="plugins/slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="plugins/fullcalendar/fullcalendar.min.css">
+	<link rel="stylesheet" type="text/css" href="plugins/fullcalendar/fullcalendar.print.css" media='print'>
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+
+	<style type="text/css">
+		footer div.ui.dark-gray, footer div.ui.inverted.segment{
+			background-image: url('images/black-orchid.png');
+			background-repeat: repeat;
+		}
+		body{
+			background-image: url('images/fabric-1-light.png');
+		}
+	</style>
+</head>
+<body>
+	<div class="line-top"></div>
+	<header class="ui labeled icon stackable tiny menu no-radius">
+		<div class="ui container">
+			<a class="item active" href="#"><i class="dashboard icon"></i>Dashboard</a>
+			<a class="item" href="widgets.html"><i class="grid layout icon"></i>Widgets</a>
+			<div class="ui dropdown item">
+				<i class="edit icon"></i>
+				Forms
+				<div class="menu">
+					<a class="item" href="form_umum.html">Form Umum</a>
+					<a class="item" href="form_canggih.html">Form Canggih</a>
+					<a class="item" href="form_editor.html">Form Editor</a>
+				</div>
+			</div>
+			<div class="ui dropdown item">
+				<i class="table icon"></i>
+				Tables
+				<div class="menu">
+					<a class="item" href="semantic_table.html">Semantic Table</a>
+					<a class="item" href="data_table.html">Data Tables</a>
+				</div>
+			</div>
+			<a class="item" href="charts.html"><i class="area chart icon"></i>Charts</a>
+			<div class="ui dropdown item">
+				<i class="laptop icon"></i>
+				UI Elements
+				<div class="menu">
+					<a class="item" href="ui_umum.html">Umum</a>
+					<a class="item" href="ui_icons.html">Icon</a>
+					<a class="item" href="ui_typografi.html">Typografi</a>
+					<a class="item" href="ui_kalender.html">Kalender</a>
+				</div>
+			</div>
+			<div class="ui dropdown item">
+				<i class="long arrow down icon"></i>
+				Dropdown
+				<div class="menu">
+					<a class="item">Level1</a>
+					<a class="item">Level1</a>
+					<a class="item">
+						<i class="dropdown icon"></i>
+						Level1
+						<div class="menu">
+							<div class="item">Level2</div>
+							<div class="item">Level2</div>
+							<div class="item">
+								<i class="dropdown icon"></i>
+								Level2
+								<div class="menu">
+									<div class="item">Level3</div>
+									<div class="item">Level3</div>
+									<div class="item">Level3</div>
+								</div>
+							</div>
+							<div class="item">Level2</div>
+							<div class="item">Level2</div>
+							<div class="item">Level2</div>
+						</div>
+					</a>
+					<a class="item">Level1</a>
+				</div>
+			</div>
+
+			<div class="right menu">
+				<div class="ui fluid dropdown item">
+					<i class="bell icon"></i>
+					Pemberitahuan
+					<div class="menu">
+						<div class="header">Update Progress</div>
+						<div class="ui divider"></div>
+						<div class="item">
+							<div class="ui tiny indicating progress" data-value="40" data-total="200">
+								<div class="bar"></div>
+								<div class="label">Progress Kapal Laut</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="ui tiny indicating progress" data-value="40" data-total="100">
+								<div class="bar"></div>
+								<div class="label">Progress Kapal Perang</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="ui tiny indicating progress" data-value="2220" data-total="3000">
+								<div class="bar"></div>
+								<div class="label">Progress Kapal Ikan</div>
+							</div>
+						</div>
+						<div class="ui divider"></div>
+						<div class="item center aligned">
+							<a href="#">Lihat Semua Pemberitahuan</a>
+						</div>
+					</div>
+				</div>
+				<div class="ui dropdown item">
+					<i class="user icon"></i>
+					Akun
+					<div class="menu">
+						<div class="item"><i class="user icon"></i> Profile</div>
+						<a class="item"><i class="settings icon"></i> Pengaturan</a>
+						<div class="divider"></div>
+						<a class="item"><i class="sign out icon"></i> Keluar</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="ui container">
+		<h3 class="ui header title-page">Dashboard</h3>
+	</div>
+
+	<div class="content">
+		<div class="ui container">
+			<div class="ui stackable grid">
+				<div class="sixteen wide column">
+					<div class="ui stacked segments">
+						<div class="ui violet header segment">
+							Slide Gambar
+						</div>
+						<div class="ui segment">
+							<div class="slick-slider">
+								<div><img height="30" class="ui fluid image" src="images/slider1.jpg"></div>
+								<div><img height="30" class="ui fluid image" src="images/slider2.jpg"></div>
+								<div><img height="30" class="ui fluid image" src="images/slider3.jpg"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="sixteen wide column">
+					<div class="ui stacked segments">
+						<div class="ui accordion"></div>
+						<div class="ui red header segment">
+							Pendapatan Per Tahun
+							<div class="option-group">
+								<span title="minimise" class="minimise-button option-header-button">
+									<i class="radio icon"></i>
+								</span>
+								<span title="close" class="close-button option-header-button">
+									<i class="remove icon"></i>
+								</span>
+							</div>
+						</div>
+						<div class="ui segment">
+							<div class="ui stackable grid">
+								<div class="ten wide column">
+									<canvas id="reportChart" style="width: 100%;height:40px;"></canvas>	
+								</div>
+								<div class="six wide column">
+									<h5 class="ui center aligned header">Target Pendapatan</h5>
+									<h6 style="margin-bottom: 20px;" class="center aligned">Target Pendapatan Tahun 2016 Terbaru</h6>
+									<div data-value="10" data-total="20" id="progress1" class="ui indicating update small progress">
+										<div class="bar no-radius no-radius">
+											<div class="progress"></div>
+										</div>
+										<div style="text-align: left;" class="left aligned label">Funding</div>
+									</div>
+									<div data-value="1" data-total="20" id="progress2" class="ui indicating update small progress">
+										<div class="bar no-radius no-radius">
+											<div class="progress"></div>
+										</div>
+										<div style="text-align: left;" class="left aligned label">Funding</div>
+									</div>
+
+									<div data-value="20" data-total="30" id="progress3" class="ui indicating update small progress">
+										<div class="bar no-radius">
+											<div class="progress"></div>
+										</div>
+										<div style="text-align: left;" class="left aligned label">Funding</div>
+									</div>
+
+									<div data-value="10" data-total="20" id="progress4" class="ui indicating update small progress">
+										<div class="bar no-radius">
+											<div class="progress"></div>
+										</div>
+										<div style="text-align: left;" class="left aligned label">Funding</div>
+									</div>
+
+									<div data-value="15" data-total="16" id="progress5" class="ui indicating update small progress">
+										<div class="bar no-radius">
+											<div class="progress"></div>
+										</div>
+										<div style="text-align: left;" class="left aligned label">Funding</div>
+									</div>
+
+									<div data-value="30" data-total="36" id="progress6" class="ui indicating update small progress">
+										<div class="bar no-radius">
+											<div class="progress"></div>
+										</div>
+										<div style="text-align: left;" class="left aligned label">Funding</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="messageAdd" class="ui bottom attached warning clickable message">
+							<i class="warning icon"></i>
+							Ada update terbaru dari penjualan produk !
+						</div>
+					</div>
+				</div><!-- column -->
+				<div class="eleven wide column">
+					<div class="ui stacked segments">
+						<div class="ui blue header segment">
+							Laporan Pengunjung
+							<div class="option-group">
+								<span title="minimise" class="minimise-button option-header-button">
+									<i class="radio icon"></i>
+								</span>
+								<span title="close" class="close-button option-header-button">
+									<i class="remove icon"></i>
+								</span>
+							</div>
+						</div>
+						<div class="ui segment">
+							<div id="mapPengunjung" style="width: 100%; height: 293px;"></div>
+						</div>
+					</div>
+				</div><!-- column -->
+				<div class="five wide column">
+					<div class="ui stacked segments">
+						<div class="ui orange header segment">
+							Penggunaan Browser
+							<div class="option-group">
+								<span title="minimise" class="minimise-button option-header-button">
+									<i class="radio icon"></i>
+								</span>
+								<span title="close" class="close-button option-header-button">
+									<i class="remove icon"></i>
+								</span>
+							</div>
+						</div>
+						<div class="ui segment">
+							<canvas id="browserChart" style="width: 100%;height:80px;"></canvas>
+						</div>
+						<div class="ui segment">
+							Indonesia
+							<span class="warning floated-right">
+							<i class="caret up icon"></i>
+							30 Tayangan
+							</span>
+						</div>
+						<div class="ui segment">
+							USA
+							<span class="success floated-right">
+							<i class="caret up icon"></i>
+							40 Tayangan
+							</span>
+						</div>
+						<div class="ui segment">
+							Malaysia
+							<span class="danger floated-right">
+							<i class="caret down icon"></i>
+							51 Tayangan
+							</span>
+						</div>
+					</div>
+				</div><!-- column -->
+
+				<div class="three column row">
+					<div class="column">
+						<div class="ui stacked segments">
+							<div class="ui green header segment">
+								Daftar Pengguna Terbaru
+								<div class="option-group">
+									<span title="minimise" class="minimise-button option-header-button">
+										<i class="radio icon"></i>
+									</span>
+									<span title="close" class="close-button option-header-button">
+										<i class="remove icon"></i>
+									</span>
+								</div>
+							</div>
+							<div class="ui segment">
+								<div class="ui grid">
+									<div class="three column row">
+										<div class="center aligned column">
+											<img class="ui gray gray small circular image" src="images/user1.png">
+											<span class="bold">John Doe</span>
+											<h6 class="text-muted tanggal-masuk">2 November 2016</h6>
+										</div>
+										<div class="center aligned column">
+											<img class="ui gray small circular image" src="images/user1.png">
+											<span class="bold">Jane Due</span>
+											<h6 class="text-muted tanggal-masuk">2 November 2016</h6>
+										</div>
+										<div class="center aligned column">
+											<img class="ui gray small circular image" src="images/user1.png">
+											<span class="bold">Norman</span>
+											<h6 class="text-muted tanggal-masuk">2 November 2016</h6>
+										</div>
+										<div class="center aligned column">
+											<img class="ui gray small circular image" src="images/user1.png">
+											<span class="bold">John Doe</span>
+											<h6 class="text-muted tanggal-masuk">2 November 2016</h6>
+										</div>
+										<div class="center aligned column">
+											<img class="ui gray small circular image" src="images/user1.png">
+											<span class="bold">John Doe</span>
+											<h6 class="text-muted tanggal-masuk">2 November 2016</h6>
+										</div>
+										<div class="center aligned column">
+											<img class="ui gray small circular image" src="images/user1.png">
+											<span class="bold">John Doe</span>
+											<h6 class="text-muted tanggal-masuk">2 November 2016</h6>
+										</div>
+										<div class="center aligned column">
+											<img class="ui gray small circular image" src="images/user1.png">
+											<span class="bold">John Doe</span>
+											<h6 class="text-muted tanggal-masuk">2 November 2016</h6>
+										</div>
+										<div class="center aligned column">
+											<img class="ui gray small circular image" src="images/user1.png">
+											<span class="bold">John Doe</span>
+											<h6 class="text-muted tanggal-masuk">2 November 2016</h6>
+										</div>
+										<div class="center aligned column">
+											<img class="ui gray small circular image" src="images/user1.png">
+											<span class="bold">John Doe</span>
+											<h6 class="text-muted tanggal-masuk">2 November 2016</h6>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="ui center aligned segment">
+								<a href="javascript:;">Lihat Semua User</a>
+							</div>
+						</div>
+					</div><!-- column -->
+					<div class="column">
+						<div class="ui stacked segments">
+							<div class="ui teal header segment">
+								Pesan dari Client
+								<div class="option-group">
+									<span title="minimise" class="minimise-button option-header-button">
+										<i class="radio icon"></i>
+									</span>
+									<span title="close" class="close-button option-header-button">
+										<i class="remove icon"></i>
+									</span>
+								</div>
+							</div>
+							<div class="ui scroll-segment segment" style="max-height: 400px;">
+								<div class="ui feed">
+								  <div class="event">
+								    <div class="label">
+								      <img src="images/user2.png">
+								    </div>
+								    <div class="content">
+								      <div class="summary">
+								        <a class="user">
+								          Elliot Fu
+								        </a> added you as a friend
+								        <div class="date">
+								          1 Hour Ago
+								        </div>
+								      </div>
+								      <div class="meta">
+								        <a class="like">
+								          <i class="like icon"></i> 4 Likes
+								        </a>
+								      </div>
+								    </div>
+								  </div>
+								  <div class="event">
+								    <div class="label">
+								      <img src="images/user2.png">
+								    </div>
+								    <div class="content">
+								      <div class="summary">
+								        <a>Helen Troy</a> added <a>2 new illustrations</a>
+								        <div class="date">
+								          4 days ago
+								        </div>
+								      </div>
+								      <div class="extra images">
+								        <a><img src="images/image.png"></a>
+								        <a><img src="images/image.png"></a>
+								      </div>
+								      <div class="meta">
+								        <a class="like">
+								          <i class="like icon"></i> 1 Like
+								        </a>
+								      </div>
+								    </div>
+								  </div>
+								  <div class="event">
+								    <div class="label">
+								      <img src="images/user1.png">
+								    </div>
+								    <div class="content">
+								      <div class="summary">
+								        <a class="user">
+								          Jenny Hess
+								        </a> added you as a friend
+								        <div class="date">
+								          2 Days Ago
+								        </div>
+								      </div>
+								      <div class="meta">
+								        <a class="like">
+								          <i class="like icon"></i> 8 Likes
+								        </a>
+								      </div>
+								    </div>
+								  </div>
+								  <div class="event">
+								    <div class="label">
+								      <img src="images/user1.png">
+								    </div>
+								    <div class="content">
+								      <div class="summary">
+								        <a>Joe Henderson</a> posted on his page
+								        <div class="date">
+								          3 days ago
+								        </div>
+								      </div>
+								      <div class="extra text">
+								        Ours is a life of constant reruns. We're always circling back to where we'd we started, then starting all over again. Even if we don't run extra laps that day, we surely will come back for more of the same another day soon.
+								      </div>
+								      <div class="meta">
+								        <a class="like">
+								          <i class="like icon"></i> 5 Likes
+								        </a>
+								      </div>
+								    </div>
+								  </div>
+								  <div class="event">
+								    <div class="label">
+								      <img src="images/user2.png">
+								    </div>
+								    <div class="content">
+								      <div class="summary">
+								        <a>Justen Kitsune</a> added <a>2 new photos</a> of you
+								        <div class="date">
+								          4 days ago
+								        </div>
+								      </div>
+								      <div class="extra images">
+								        <a><img src="images/image.png"></a>
+								        <a><img src="images/image.png"></a>
+								      </div>
+								      <div class="meta">
+								        <a class="like">
+								          <i class="like icon"></i> 41 Likes
+								        </a>
+								      </div>
+								    </div>
+								  </div>
+								</div>
+							</div>
+							<div class="ui segment">
+								<div class="ui fluid action input no-radius">
+									<input type="text" placeholder="Pesan">
+									<div class="ui button">Broadcast</div>
+								</div>
+							</div>
+						</div>
+					</div><!-- column -->
+					<div class="column">
+						<div class="ui stacked segments">
+							<div class="ui purple header segment">
+								Produk Terbaru
+								<div class="option-group">
+									<span title="minimise" class="minimise-button option-header-button">
+										<i class="radio icon"></i>
+									</span>
+									<span title="close" class="close-button option-header-button">
+										<i class="remove icon"></i>
+									</span>
+								</div>
+							</div>
+							<div class="ui segment">
+								<div class="ui divided relaxed list">
+								  <div class="item">
+								    <img class="ui avatar image no-radius" src="images/image.png">
+								    <div class="content">
+								      <a class="header">Rachel</a>
+								      <div class="description">Last seen watching</div>
+								    </div>
+								  </div>
+								  <div class="item">
+								    <img class="ui avatar image no-radius" src="images/image.png">
+								    <div class="content">
+								      <a class="header">Lindsay</a>
+								      <div class="description">Last seen watching</div>
+								    </div>
+								  </div>
+								  <div class="item">
+								    <img class="ui avatar image no-radius" src="images/image.png">
+								    <div class="content">
+								      <a class="header">Matthew</a>
+								      <div class="description">Last seen watching </div>
+								    </div>
+								  </div>
+								  <div class="item">
+								    <img class="ui avatar image no-radius" src="images/image.png">
+								    <div class="content">
+								      <a class="header">Jenny Hess</a>
+								      <div class="description">Last seen watching</div>
+								    </div>
+								  </div>
+								  <div class="item">
+								    <img class="ui avatar image no-radius" src="images/image.png">
+								    <div class="content">
+								      <a class="header">Veronika Ossi</a>
+								      <div class="description">Has not wat</div>
+								    </div>
+								  </div>
+								  <div class="item">
+								    <img class="ui avatar image no-radius" src="images/image.png">
+								    <div class="content">
+								      <a class="header">Rachel</a>
+								      <div class="description">Last seen watching</div>
+								    </div>
+								  </div>
+								  <div class="item">
+								    <img class="ui avatar image no-radius" src="images/image.png">
+								    <div class="content">
+								      <a class="header">Lindsay</a>
+								      <div class="description">Last seen watching</div>
+								    </div>
+								  </div>
+								  <div class="item">
+								    <img class="ui avatar image no-radius" src="images/image.png">
+								    <div class="content">
+								      <a class="header">Matthew</a>
+								      <div class="description">Last seen watching </div>
+								    </div>
+								  </div>
+								  <div class="item">
+								    <img class="ui avatar image no-radius" src="images/image.png">
+								    <div class="content">
+								      <a class="header">Matthew</a>
+								      <div class="description">Last seen watching </div>
+								    </div>
+								  </div>
+								</div>
+							</div>
+							<div class="ui center aligned segment">
+								<a href="javascript:;">Lihat Semua Produk</a>
+							</div>
+						</div>
+					</div><!-- column -->
+				</div>
+			</div>
+		</div><!-- container -->
+	</div><!-- content -->
+
+		<footer class="ui segments" style="border-radius:0px 0px 0px 0px!important;margin-bottom: -1px;margin-left: -1px;">
+		<div class="ui dark-gray very padded segment no-radius">
+			<div class="ui four column doubling stackable grid container">
+			  <div class="column">
+			  	<h5 class="ui white header">About Kurniawan Template</h5>
+			    <div class="ui link list">
+					<a class="item">agungkurniawan.me</a>
+					<a class="item">Web Developer</a>
+					<a class="item">Responsive HTML Portofolio</a>
+					<a class="item">Free Script Resources</a>
+				</div>
+			  </div>
+			  <div class="column">
+			    <h5 class="ui white header">Support</h5>
+			    <div class="ui link list">
+					<a class="item">Frequently Asked Questions</a>
+					<a class="item">Ask Question</a>
+					<a class="item">Tutorial</a>
+					<a class="item">Feedback</a>
+				</div>
+			  </div>
+			  <div class="column">
+			    <h5 class="ui white header">Plugins</h5>
+			    <div class="ui link list">
+					<a class="item">Jquery</a>
+					<a class="item">Semantic-ui</a>
+					<a class="item">jqvmap</a>
+				</div>
+			  </div>
+			  <div class="column">
+			    <h5 class="ui white header">Legal</h5>
+			    <div class="ui link list">
+					<a class="item">Read License</a>
+					<a class="item">Web Developer</a>
+					<a class="item">Responsive HTML Portofolio</a>
+				</div>
+			  </div>
+			</div>
+		</div>
+		<div class="ui inverted segment no-radius">
+			<div class="ui container">
+				&copy; 2016 Agung Kurniawan@<a href="http://thaybah.id" target="_blank">Thaybah Surabaya</a>
+			</div>
+		</div>
+	</footer>
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="semantic/semantic.min.js"></script>
+	<script type="text/javascript" src="plugins/chartjs/Chart.bundle.min.js"></script>
+	<script type="text/javascript" src="plugins/jqvmap/jquery.vmap.min.js"></script>
+	<script type="text/javascript" src="plugins/jqvmap/maps/jquery.vmap.world.js"></script>
+	<script type="text/javascript" src="plugins/daterangepicker/moment.min.js"></script>
+	<script type="text/javascript" src="plugins/daterangepicker/daterangepicker.min.js"></script>
+	<script type="text/javascript" src="plugins/inputmask/jquery.inputmask.bundle.min.js"></script>
+	<script type="text/javascript" src="plugins/ckeditor/ckeditor.js"></script>
+	<script type="text/javascript" src="plugins/tinymce/tinymce.min.js"></script>
+	<script type="text/javascript" src="plugins/datatables/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="plugins/datatables/js/dataTables.semanticui.min.js"></script>
+	<script type="text/javascript" src="plugins/slick/slick.min.js"></script>
+	<script type="text/javascript" src="plugins/fullcalendar/fullcalendar.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+
+	<!-- Message -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.slick-slider').slick({
+				infinite: true,
+				dots: false,
+			    prevArrow: false,
+			    nextArrow: false,
+			    autoplay: true
+			});
+		});
+		$("#messageAdd").click(function(){
+			$("div.update.progress").each(function(key,obj){
+				$(obj).progress('increment');
+				$(obj).progress('increment');
+				$(obj).progress('increment');
+			});
+		});
+	</script>
+
+	<!-- Chart -->
+	<script type="text/javascript">
+	var ct1 = document.getElementById("reportChart");
+	var chartPenjualan = Chart.Line(ct1, {
+	    data: {
+	        labels: ["2010", "2011", "2012", "2013", "2014", "2015"],
+	        datasets: [{
+	            label: 'Produk A',
+	         	yAxesGroup: "1",
+	         	type:'line',
+	            data: [12, 19, 3, 5, 2, 3],
+	            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+	            borderColor: 'rgba(153, 102, 255, 1)',
+	            borderWidth: 1
+	        },{
+	        	label: 'Produk B',
+	        	yAxesGroup: "2",
+	            data: [3, 10, 7, 4, 9, 16],
+	            backgroundColor: 'rgba(150, 20, 0, 0.2)',
+	            borderColor: 'rgba(200, 10, 0, 1)',
+	            borderWidth: 2
+	        }]
+	    },options: {
+	        title: {
+	            display: true,
+	            text: 'Grafik Pendapatan Pertahun'
+	        }
+	    }
+	});
+
+	var ct2 = document.getElementById("browserChart");
+	var chartBrowser = new Chart(ct2, {
+	    type: 'doughnut',
+	    data: {
+		    labels: [
+		        "Chrome",
+		        "Firefox",
+		        "IE",
+		        "Opera"
+		    ],
+		    datasets: [
+		        {
+		            data: [300, 500, 60, 230],
+		            backgroundColor: [
+		            	"#2c3e50",
+		                "#FFCE56",
+		                "#36A2EB",
+		                "#FF6384"
+		            ],
+		            hoverBackgroundColor: [
+		                "#2c3e90",
+		                "#FFCE56",
+		                "#36A2EB",
+		                "#FF6384"
+		            ]
+		        }]
+		},options:{
+			legend:{
+				position:"right"
+			}
+		}
+	});
+	</script>
+
+	<!-- Progress -->
+	<script type="text/javascript">
+		$('#progress1').progress({
+		    text: {
+		      active  : '{value} dari {total} produk',
+		      success : '{total} produk terunggah!'
+		    }
+		});
+		$('#progress2').progress({
+		    text: {
+		      active  : '{value} dari {total} produk',
+		      success : '{total} produk terunggah!'
+		    }
+		});
+		$('#progress3').progress({
+		    text: {
+		      active  : '{value} dari {total} produk',
+		      success : '{total} produk terunggah!'
+		    }
+		});
+		$('#progress4').progress({
+		    text: {
+		      active  : '{value} dari {total} produk',
+		      success : '{total} produk terunggah!'
+		    }
+		});
+		$('#progress5').progress({
+		    text: {
+		      active  : '{value} dari {total} produk',
+		      success : '{total} produk terunggah!'
+		    }
+		});
+		$('#progress6').progress({
+		    text: {
+		      active  : '{value} dari {total} produk',
+		      success : '{total} produk terunggah!'
+		    }
+		});
+	</script>
+
+
+	<!-- JQVMap -->
+	<script type="text/javascript">
+		$("#mapPengunjung").vectorMap({ map: 'world_en' });
+	</script>
+
+
+</body>
+</html>

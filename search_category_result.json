@@ -1,0 +1,39 @@
+{
+  "results": {
+    "category1": {
+      "name": "Category 1",
+      "results": [
+        {
+          "title": "Result Title 1",
+          "price": "Optional Price",
+          "description": "esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+          "title": "Result Title 2",
+          "price": "Optional Price",
+          "description": "commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit"
+        },
+        {
+          "title": "Result Title 3",
+          "price": "Optional Price",
+          "description": "consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore"
+        }
+      ]
+    },
+    "category2": {
+      "name": "Category 2",
+      "results": [
+        {
+          "title": "Result Title",
+          "price": "Optional Price",
+          "description": "magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in"
+        },
+        {
+          "title": "Result Title",
+          "price": "Optional Price",
+          "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt"
+        }
+      ]
+    }
+  }
+}

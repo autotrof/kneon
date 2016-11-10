@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pelindo Dashboard</title>
+	<link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
+	<link rel="stylesheet" type="text/css" href="plugins/fontawesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="plugins/jqvmap/jqvmap.min.css">
+	<link rel="stylesheet" type="text/css" href="plugins/daterangepicker/daterangepicker.min.css">
+	<link rel="stylesheet" type="text/css" href="plugins/datatables/css/jquery.dataTables.min.css">
+	<link rel="stylesheet" type="text/css" href="plugins/datatables/css/dataTables.semanticui.min.css">
+	<link rel="stylesheet" type="text/css" href="plugins/slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="plugins/fullcalendar/fullcalendar.min.css">
+	<link rel="stylesheet" type="text/css" href="plugins/fullcalendar/fullcalendar.print.css" media='print'>
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+
+	<style type="text/css">
+		footer div.ui.dark-gray, footer div.ui.inverted.segment{
+			background-image: url('images/black-orchid.png');
+			background-repeat: repeat;
+		}
+		body{
+			background-image: url('images/fabric-1-light.png');
+		}
+	</style>
+</head>
+<body>
+	<div class="line-top"></div>
+	<header class="ui labeled icon stackable tiny menu no-radius">
+		<div class="ui container">
+			<a class="item" href="dashboard.html"><i class="dashboard icon"></i>Dashboard</a>
+			<a class="item" href="widgets.html"><i class="grid layout icon"></i>Widgets</a>
+			<div class="ui dropdown item">
+				<i class="edit icon"></i>
+				Forms
+				<div class="menu">
+					<a class="item" href="form_umum.html">Form Umum</a>
+					<a class="item active" href="#">Form Canggih</a>
+					<a class="item" href="form_editor.html">Form Editor</a>
+				</div>
+			</div>
+			<div class="ui dropdown item">
+				<i class="table icon"></i>
+				Tables
+				<div class="menu">
+					<a class="item" href="semantic_table.html">Semantic Table</a>
+					<a class="item" href="data_table.html">Data Tables</a>
+				</div>
+			</div>
+			<a class="item" href="charts.html"><i class="area chart icon"></i>Charts</a>
+			<div class="ui dropdown item">
+				<i class="laptop icon"></i>
+				UI Elements
+				<div class="menu">
+					<a class="item" href="ui_umum.html">Umum</a>
+					<a class="item" href="ui_icons.html">Icon</a>
+					<a class="item" href="ui_typografi.html">Typografi</a>
+					<a class="item" href="ui_kalender.html">Kalender</a>
+				</div>
+			</div>
+			<div class="ui dropdown item">
+				<i class="long arrow down icon"></i>
+				Dropdown
+				<div class="menu">
+					<a class="item">Level1</a>
+					<a class="item">Level1</a>
+					<a class="item">
+						<i class="dropdown icon"></i>
+						Level1
+						<div class="menu">
+							<div class="item">Level2</div>
+							<div class="item">Level2</div>
+							<div class="item">
+								<i class="dropdown icon"></i>
+								Level2
+								<div class="menu">
+									<div class="item">Level3</div>
+									<div class="item">Level3</div>
+									<div class="item">Level3</div>
+								</div>
+							</div>
+							<div class="item">Level2</div>
+							<div class="item">Level2</div>
+							<div class="item">Level2</div>
+						</div>
+					</a>
+					<a class="item">Level1</a>
+				</div>
+			</div>
+
+			<div class="right menu">
+				<div class="ui fluid dropdown item">
+					<i class="bell icon"></i>
+					Pemberitahuan
+					<div class="menu">
+						<div class="header">Update Progress</div>
+						<div class="ui divider"></div>
+						<div class="item">
+							<div class="ui tiny indicating progress" data-value="40" data-total="200">
+								<div class="bar"></div>
+								<div class="label">Progress Kapal Laut</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="ui tiny indicating progress" data-value="40" data-total="100">
+								<div class="bar"></div>
+								<div class="label">Progress Kapal Perang</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="ui tiny indicating progress" data-value="2220" data-total="3000">
+								<div class="bar"></div>
+								<div class="label">Progress Kapal Ikan</div>
+							</div>
+						</div>
+						<div class="ui divider"></div>
+						<div class="item center aligned">
+							<a href="#">Lihat Semua Pemberitahuan</a>
+						</div>
+					</div>
+				</div>
+				<div class="ui dropdown item">
+					<i class="user icon"></i>
+					Akun
+					<div class="menu">
+						<div class="item"><i class="user icon"></i> Profile</div>
+						<a class="item"><i class="settings icon"></i> Pengaturan</a>
+						<div class="divider"></div>
+						<a class="item"><i class="sign out icon"></i> Keluar</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="ui container">
+		<h3 class="ui header title-page">Form Canggiht</h3>
+	</div>
+
+
+	<div class="content">
+		<div class="ui container">
+			<div class="ui stackable grid">
+				<div class="two column row">
+					<div class="column">
+						<div class="ui stacked segments">
+							<div class="ui header yellow segment">
+								Select
+							</div>
+							<div class="ui segment">
+								<form class="ui form">
+									<div class="field">
+										<label>Multiple</label>
+										<select multiple="" class="ui dropdown">
+											<option value="">Select Country</option>
+											<option value="AF">Afghanistan</option>
+											<option value="AX">Åland Islands</option>
+											<option value="AL">Albania</option>
+											<option value="DZ">Algeria</option>
+											<option value="AS">American Samoa</option>
+											<option value="AD">Andorra</option>
+											<option value="AO">Angola</option>
+											<option value="AI">Anguilla</option>
+											<option value="ID">Indonesia</option>
+										</select>
+									</div>
+									<div class="field">
+										<label>Flag</label>
+										<div class="ui fluid search selection dropdown">
+											<input type="hidden" name="country">
+									        <i class="dropdown icon"></i>
+									        <div class="default text">Select Country</div>
+									        <div class="menu">
+											    <div class="item" data-value="sm"><i class="sm flag"></i>San Marino</div>
+											    <div class="item" data-value="gs"><i class="gs flag"></i>Sandwich Islands</div>
+											    <div class="item" data-value="st"><i class="st flag"></i>Sao Tome</div>
+											    <div class="item" data-value="sa"><i class="sa flag"></i>Saudi Arabia</div>
+											    <div class="item" data-value="sn"><i class="sn flag"></i>Senegal</div>
+											    <div class="item" data-value="cs"><i class="cs flag"></i>Serbia</div>
+											    <div class="item" data-value="rs"><i class="rs flag"></i>Serbia</div>
+											    <div class="item" data-value="sc"><i class="sc flag"></i>Seychelles</div>
+											    <div class="item" data-value="tn"><i class="tn flag"></i>Tunisia</div>
+											    <div class="item" data-value="tr"><i class="tr flag"></i>Turkey</div>
+											    <div class="item" data-value="tm"><i class="tm flag"></i>Turkmenistan</div>
+											    <div class="item" data-value="tv"><i class="tv flag"></i>Tuvalu</div>
+											    <div class="item" data-value="ug"><i class="ug flag"></i>Uganda</div>
+											    <div class="item" data-value="ua"><i class="ua flag"></i>Ukraine</div>
+											    <div class="item" data-value="ae"><i class="ae flag"></i>United Arab Emirates</div>
+											    <div class="item" data-value="us"><i class="us flag"></i>United States</div>
+											    <div class="item" data-value="uy"><i class="uy flag"></i>Uruguay</div>
+											    <div class="item" data-value="um"><i class="um flag"></i>Us Minor Islands</div>
+											    <div class="item" data-value="zw"><i class="zw flag"></i>Zimbabwe</div>
+	   										</div>
+										</div>
+									</div>
+									<div class="field">
+										<label>Multiple With Image</label>
+										<div class="ui fluid multiple search selection dropdown">
+											<input type="hidden" name="country">
+									        <i class="dropdown icon"></i>
+									        <div class="default text">Select Friends</div>
+									        <div class="menu">
+												<div class="item" data-value="yussa" data-text="Yussa">
+												<img class="ui mini avatar image" src="images/user1.png">
+												Yussa
+												</div>
+												<div class="item" data-value="enigma" data-text="Enigma">
+												<img class="ui mini avatar image" src="images/user2.png">
+												Enigma
+												</div>
+												<div class="item" data-value="agung" data-text="Agung">
+												<img class="ui mini avatar image" src="images/image.png">
+												Agung
+												</div>
+												<div class="item" data-value="kurniawan" data-text="Kurniawan">
+												<img class="ui mini avatar image" src="images/user1.png">
+												Kurniawan
+												</div>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="ui right aligned segment">
+								<button class="ui secondary button" type="submit">Cancel</button>
+								<button class="ui primary button" type="submit">Submit</button>
+							</div>
+						</div><!-- segments -->
+
+						<div class="ui stacked segments">
+							<div class="ui header green segment">
+								Pencarian
+							</div>
+							<div class="ui segment">
+								<div class="ui form">
+									<div class="field">
+										<label>Pencarian</label>
+										<div class="ui search" id="example1">
+											<input class="prompt" type="text" placeholder="Find Country">
+											<div class="results"></div>
+										</div>
+									</div>
+
+									<div class="field">
+										<label>Pencarian Deskripsi</label>
+										<div class="ui search" id="example2">
+											<input class="prompt" type="text" placeholder="Find Country">
+											<div class="results"></div>
+										</div>
+									</div>
+
+									<div class="field">
+										<label>Pencarian Kategori</label>
+										<div class="ui category search" id="example3">
+											<input class="prompt" type="text" placeholder="Find Country">
+											<div class="results"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="ui right aligned segment">
+								<button class="ui secondary button" type="submit">Cancel</button>
+								<button class="ui primary button" type="submit">Submit</button>
+							</div>
+						</div><!-- segments -->
+					</div><!-- column -->
+					<div class="column">
+						<div class="ui stacked segments">
+							<div class="ui purple inverted segment">
+								Tanggal
+							</div>
+							<div class="ui segment">
+								<div class="ui form">
+									<div class="field">
+										<label>Date Range</label>
+										<div class="ui labeled input">
+											<div class="ui basic label">
+												<i class="calendar icon"></i>
+											</div>
+											<input class="range" type="text" placeholder="YYYY-MM-DD">
+										</div>
+									</div>
+									<div class="field">
+										<label>Single</label>
+										<div class="ui labeled input">
+											<div class="ui basic label">
+												<i class="calendar icon"></i>
+											</div>
+											<input type="text" class="range single" placeholder="YYYY-MM-DD">
+										</div>
+									</div>
+									<div class="field">
+										<label>Date Range With Time</label>
+										<div class="ui labeled input">
+											<div class="ui basic label">
+												<i class="wait icon"></i>
+											</div>
+											<input type="text" class="range time" placeholder="YYYY-MM-DD hh:mm:ss">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="ui right aligned segment">
+								<button class="ui primary button">Submit</button>
+							</div>
+						</div><!-- segments -->
+
+						<div class="ui stacked segments">
+							<div class="ui orange inverted segment">
+								Mask
+							</div>
+							<div class="ui segment">
+								<div class="ui form">
+									<div class="field">
+										<label>Phone</label>
+										<div class="ui labeled input">
+											<div class="ui basic label">
+												<i class="phone icon"></i>
+											</div>
+											<input type="text" placeholder="phone number" id="mask-phone">
+										</div>
+									</div>
+									<div class="field">
+										<label>Date</label>
+										<div class="ui labeled input">
+											<div class="ui basic label">
+												<i class="calendar icon"></i>
+											</div>
+											<input type="text" placeholder="date" id="mask-date">
+										</div>
+									</div>
+									<div class="field">
+										<label>IP address</label>
+										<div class="ui labeled input">
+											<div class="ui basic label">
+												<i class="laptop icon"></i>
+											</div>
+											<input type="text" placeholder="ip address" id="mask-ip">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="ui right aligned segment">
+								<button class="ui primary button">Submit</button>
+							</div>
+						</div><!-- segments -->
+					</div><!-- column -->
+				</div>
+			</div>
+		</div><!-- container -->
+	</div><!-- content -->
+
+		<footer class="ui segments" style="border-radius:0px 0px 0px 0px!important;margin-bottom: -1px;margin-left: -1px;">
+		<div class="ui dark-gray very padded segment no-radius">
+			<div class="ui four column doubling stackable grid container">
+			  <div class="column">
+			  	<h5 class="ui white header">About Kurniawan Template</h5>
+			    <div class="ui link list">
+					<a class="item">agungkurniawan.me</a>
+					<a class="item">Web Developer</a>
+					<a class="item">Responsive HTML Portofolio</a>
+					<a class="item">Free Script Resources</a>
+				</div>
+			  </div>
+			  <div class="column">
+			    <h5 class="ui white header">Support</h5>
+			    <div class="ui link list">
+					<a class="item">Frequently Asked Questions</a>
+					<a class="item">Ask Question</a>
+					<a class="item">Tutorial</a>
+					<a class="item">Feedback</a>
+				</div>
+			  </div>
+			  <div class="column">
+			    <h5 class="ui white header">Plugins</h5>
+			    <div class="ui link list">
+					<a class="item">Jquery</a>
+					<a class="item">Semantic-ui</a>
+					<a class="item">jqvmap</a>
+				</div>
+			  </div>
+			  <div class="column">
+			    <h5 class="ui white header">Legal</h5>
+			    <div class="ui link list">
+					<a class="item">Read License</a>
+					<a class="item">Web Developer</a>
+					<a class="item">Responsive HTML Portofolio</a>
+				</div>
+			  </div>
+			</div>
+		</div>
+		<div class="ui inverted segment no-radius">
+			<div class="ui container">
+				&copy; 2016 Agung Kurniawan@<a href="http://thaybah.id" target="_blank">Thaybah Surabaya</a>
+			</div>
+		</div>
+	</footer>
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="semantic/semantic.min.js"></script>
+	<script type="text/javascript" src="plugins/chartjs/Chart.bundle.min.js"></script>
+	<script type="text/javascript" src="plugins/jqvmap/jquery.vmap.min.js"></script>
+	<script type="text/javascript" src="plugins/jqvmap/maps/jquery.vmap.world.js"></script>
+	<script type="text/javascript" src="plugins/daterangepicker/moment.min.js"></script>
+	<script type="text/javascript" src="plugins/daterangepicker/daterangepicker.min.js"></script>
+	<script type="text/javascript" src="plugins/inputmask/jquery.inputmask.bundle.min.js"></script>
+	<script type="text/javascript" src="plugins/ckeditor/ckeditor.js"></script>
+	<script type="text/javascript" src="plugins/tinymce/tinymce.min.js"></script>
+	<script type="text/javascript" src="plugins/datatables/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="plugins/datatables/js/dataTables.semanticui.min.js"></script>
+	<script type="text/javascript" src="plugins/slick/slick.min.js"></script>
+	<script type="text/javascript" src="plugins/fullcalendar/fullcalendar.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+
+	<script type="text/javascript" src="plugins/daterangepicker/daterangepicker.min.js"></script>
+
+	<script type="text/javascript">
+		var anggota = [
+			{ title: 'Andorra' },
+			{ title: 'United Arab Emirates' },
+			{ title: 'Afghanistan' },
+			{ title: 'Antigua' },
+			{ title: 'Anguilla' },
+			{ title: 'Albania' },
+			{ title: 'Armenia' },
+			{ title: 'Netherlands Antilles' },
+			{ title: 'Angola' },
+			{ title: 'Argentina' },
+			{ title: 'American Samoa' },
+			{ title: 'Austria' },
+			{ title: 'Australia' },
+			{ title: 'Aruba' },
+			{ title: 'Aland Islands' },
+			{ title: 'Azerbaijan' },
+			{ title: 'Bosnia' },
+			{ title: 'Barbados' },
+			{ title: 'Bangladesh' },
+			{ title: 'Belgium' },
+			{ title: 'Burkina Faso' },
+			{ title: 'Bulgaria' },
+			{ title: 'Bahrain' },
+			{ title: 'Burundi' }
+		]
+		$('.ui.search#example1').search({
+			source: anggota
+		});
+
+		$('.ui.search#example2').search({
+			apiSettings: {
+				url: 'search_deskripsi_result.json'
+			},fields: {
+				results : 'items',
+				title   : 'title'
+			},minCharacters : 1
+		});
+
+		$('.ui.search#example3').search({
+		    apiSettings: {
+		      url: 'search_category_result.json'
+		    },
+		    type: 'category'
+		});
+
+		$(document).ready(function(){
+			$("#mask-phone").inputmask("(999)-9999-9999");
+			$("#mask-date").inputmask("9999-99-99");
+			$("#mask-ip").inputmask("999-999-999-999");
+		});
+	</script>
+</body>
+</html>
